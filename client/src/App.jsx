@@ -5,7 +5,7 @@ function App() {
     <main className="container">
       <header>
         <h1 className="logo">Harmonia</h1>
-        <h2> les petit fien</h2>
+        <h2> le grand fien</h2>
 
       </header>
 

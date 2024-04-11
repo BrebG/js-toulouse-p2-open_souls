@@ -58,7 +58,7 @@ function App() {
 
       <section className="text-box">
         <h2 className="block-primary">
-          <span className="block-primary-main">Harmonia</span>
+          <span className="block-primary-main">Open Souls</span>
           <span className="block-primary-sub">Votre framework JavaScript</span>
         </h2>
         <a

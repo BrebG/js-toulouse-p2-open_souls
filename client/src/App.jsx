@@ -58,7 +58,12 @@ function App() {
 
       <section className="text-box">
         <h2 className="block-primary">
-          <span className="block-primary-main">Harmonia</span>
+          <span className="block-primary-main">
+            j'ai changé le titre qu'on m'a demandé de changer pour changer le
+            titre de la page web qu'on devait changer avec un changement qui
+            change le titre qui a bien changé avec le changement que j'ai
+            effectué pour le changer
+          </span>
           <span className="block-primary-sub">Votre framework JavaScript</span>
         </h2>
         <a

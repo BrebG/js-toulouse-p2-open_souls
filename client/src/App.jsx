@@ -5,6 +5,8 @@ function App() {
     <main className="container">
       <header>
         <h1 className="logo">Harmonia</h1>
+        <h2> le grand fien</h2>
+
       </header>
 
       <nav className="navbar">
@@ -58,8 +60,8 @@ function App() {
 
       <section className="text-box">
         <h2 className="block-primary">
-          <span className="block-primary-main">Open Souls</span>
-          <span className="block-primary-sub">Votre framework JavaScript</span>
+          <span className="block-primary-main">Open souls</span>
+          <span className="block-primary-sub">Votre jeu vidéo préféré</span>
         </h2>
         <a
           href="https://documentation-harmonia.vercel.app/"

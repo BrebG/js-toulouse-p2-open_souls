@@ -1,0 +1,81 @@
+.CombatScreen {
+  background-image: url("./src/assets/images/radahnBg.jpg");
+  background-position: 80%;
+}
+
+.Lifebar {
+  width: 10rem;
+
+  p {
+    font-weight: 900;
+    margin: 0;
+  }
+
+  div {
+    background-color: #910000;
+    height: 1.2rem;
+    border-radius: 50px;
+    box-shadow: 2px;
+  }
+}
+
+.Ennemy {
+  display: flex;
+  flex-direction: row-reverse;
+  color: black;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  font-family: "Cinzel", serif;
+  height: 33%;
+
+  img {
+    padding-top: 2rem;
+    height: 16.25rem;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      padding-top: 1rem;
+      margin: 0;
+      font-size: 0.8rem;
+    }
+
+    .description {
+      padding: 1rem;
+      margin: 0;
+      font-size: 0.8rem;
+      background-color: #1a2325e0;
+      color: #fafafa;
+      border-radius: 5px;
+    }
+  }
+}
+
+.Player {
+  height: 33%;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  font-family: "Cinzel", serif;
+
+  img {
+    padding-top: 2rem;
+    height: 20rem;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .Lifebar {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,75 @@
+:root {
+  --darker-color: #1a2325;
+  --main-color: #30413d;
+  --secondary-color: #687356;
+  --lighter-color: #bdbe8e;
+
+  --main-font: "Cinzel", serif;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--darker-color);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/app-background.webp");
+  background-size: cover;
+  background-position: center;
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    margin: 3.5rem;
+    color: var(--darker-color);
+  }
+
+  .home-text {
+    background-color: rgba(26, 35, 37, 0.7);
+    padding: 1.5rem;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.8rem;
+    max-width: 34rem;
+    margin-bottom: 3rem;
+    margin: 1rem;
+  }
+
+  .app-button {
+    background-color: var(--main-color);
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    color: white;
+    border-radius: 999px;
+    text-decoration: none;
+    margin: 3rem;
+  }
+
+  .app-button:hover {
+    background-color: var(--lighter-color);
+  }
+}
+
+input {
+  margin: 0;
+  border-radius: 10px;
+  width: 220px;
+  height: 45px;
+  border: none;
+}
+
+.text-input {
+  align-items: flex-start;
+  display: flex;
+  font-weight: bold;
+}

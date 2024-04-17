@@ -5,7 +5,7 @@ function YouDiedPage() {
   return (
     <div className="you-died-container">
       <h1 className="you-died-text">YOU DIED!</h1>
-      <Link to="/game" className="retry-button">
+      <Link to="/" className="retry-button">
         TRY AGAIN
       </Link>
     </div>

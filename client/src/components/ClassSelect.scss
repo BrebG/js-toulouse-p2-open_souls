@@ -3,7 +3,7 @@
     background-color: var(--main-color);
     padding-block: 0.5rem;
     padding-inline: 1rem;
-    color: white;
+    color: var(--white-color);
     border-radius: 999px;
     text-decoration: none;
     margin: 2rem;
@@ -27,9 +27,11 @@
     margin: 1rem;
   }
 
-  // .button-index {
-  //   background: none;
-  //   border: none;
-  //   padding: 3rem;
-  // }
+  .button-index {
+    background: none;
+    border: none;
+    padding: 2rem;
+    font-size: 2rem;
+    color: var(--darker-color);
+  }
 }

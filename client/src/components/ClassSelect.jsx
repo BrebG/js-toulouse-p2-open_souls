@@ -37,15 +37,16 @@ function ClassSelect() {
                 onClick={pickPrevious}
                 className="button-index"
               >
-                Précédent
+                &#10094;
               </button>
               <img
                 src={classes[classIndex].image}
                 alt={classes[classIndex].name}
                 className="class-image"
               />
+
               <button type="button" onClick={pickNext} className="button-index">
-                Next
+                &#10095;
               </button>
             </div>
             <CharStats classIndex={classIndex} />

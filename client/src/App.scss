@@ -3,13 +3,13 @@
   --main-color: #30413d;
   --secondary-color: #687356;
   --lighter-color: #bdbe8e;
+  --white-color: #fff;
 
   --main-font: "Cinzel", serif;
 }
 
 body {
   font-family: var(--main-font);
-  background-color: var(--darker-color);
 }
 
 .app {
@@ -23,7 +23,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("./assets/images/app-background.webp");
+  background-image: url("./assets/images/app-background.png");
+  background-color: var(--white-color);
   background-size: cover;
   background-position: center;
 
@@ -38,7 +39,7 @@ body {
     background-color: rgba(26, 35, 37, 0.7);
     padding: 1.5rem;
     border-radius: 20px;
-    color: white;
+    color: var(--white-color);
     font-size: 0.8rem;
     max-width: 34rem;
     margin-bottom: 3rem;
@@ -49,10 +50,11 @@ body {
     background-color: var(--main-color);
     padding-block: 0.5rem;
     padding-inline: 1rem;
-    color: white;
+    color: var(--white-color);
     border-radius: 999px;
     text-decoration: none;
     margin: 3rem;
+    box-shadow: 0px 2px 10px var(--darker-color);
   }
 
   .app-button:hover {
@@ -72,4 +74,5 @@ input {
   align-items: flex-start;
   display: flex;
   font-weight: bold;
+  color: var(--darker-color);
 }

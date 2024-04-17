@@ -5,13 +5,13 @@ function VictoryPage() {
   return (
     <div className="victory-container">
       <div className="victory-content">
-        <h1>Felicitation pour avoir fini l'aventure!</h1>
-        <p>Voici votre récompense:</p>
+        <h1>Congratulation you finished your quest!</h1>
+        <p>Here is your reward:</p>
         <p>
-          Le code en dessous vous permettra de debloquer un nouveau mode de jeu.
+          The pasword below will unlock a new game mod.
         </p>
-        <p>Entrez le dans l'écran d'accueil.</p>
-        <h2>MaxiChiBre</h2>
+        <p>Enter the code below in the main screen.</p>
+        <h2>Maxicommit</h2>
 
         <Link to="/" className="menu-button">
           Menu

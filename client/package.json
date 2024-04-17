@@ -26,6 +26,6 @@
   },
   "lint-staged": {
     "*.{html,scss,css}": "prettier --check",
-    "*.{jsx,js}": "eslint --report-unused-disable-directives"
+    "*.{jsx,js}": "eslint --fix --report-unused-disable-directives"
   }
 }

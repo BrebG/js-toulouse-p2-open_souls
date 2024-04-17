@@ -2,86 +2,94 @@
   background-image: url("./src/assets/images/radahnBg.jpg");
   background-position: 80%;
   height: 100vh;
-}
-
-.Lifebar {
-  width: 10rem;
-
-  p {
-    font-weight: 900;
-    margin: 0;
-  }
-
-  div {
-    background-color: #910000;
-    height: 1.2rem;
-    border-radius: 50px;
-    box-shadow: 2px;
-  }
-}
-
-.Ennemy {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  color: black;
-  padding-top: 2rem;
-  padding-left: 25vw;
-  font-family: "Cinzel", serif;
-  height: 37vh;
-
-  img {
-    padding-top: 2rem;
-    height: 16.25rem;
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-
-    p {
-      padding-top: 1rem;
-      margin: 0;
-      font-size: 0.8rem;
-    }
-
-    .description {
-      max-width: 15rem;
-      padding: 1rem;
-      margin: 0;
-      font-size: 0.8rem;
-      background-color: #1a2325e0;
-      color: #fafafa;
-      border-radius: 5px;
-    }
-  }
-}
-
-.Player {
-  margin: 0 auto;
-  justify-content: center;
-
-  height: 37vh;
-  display: flex;
-  flex-direction: row;
-  color: black;
-  padding-right: 25vw;
-  padding-bottom: 2rem;
-  font-family: "Cinzel", serif;
-
-  img {
-    padding-top: 2rem;
-    height: 20rem;
-  }
-
-  div {
-    display: flex;
-    flex-direction: column-reverse;
-  }
 
   .Lifebar {
+    width: 10rem;
+
+    p {
+      font-weight: 900;
+      margin: 0;
+    }
+
+    div {
+      background-color: #910000;
+      height: 1.2rem;
+      border-radius: 50px;
+      box-shadow: 2px;
+    }
+  }
+
+  .Ennemy {
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    justify-content: center;
+    color: black;
+    padding-top: 2rem;
+    padding-left: 25vw;
+    font-family: "Cinzel", serif;
+    height: 37vh;
+
+    img {
+      padding-top: 2rem;
+      height: 16.25rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        padding-top: 1rem;
+        margin: 0;
+        font-size: 0.8rem;
+      }
+
+      .description {
+        max-width: 15rem;
+        padding: 1rem;
+        margin: 0;
+        font-size: 0.8rem;
+        background-color: #1a2325e0;
+        color: #fafafa;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .Player {
+    margin: 0 auto;
+    justify-content: center;
+
+    height: 37vh;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    padding-right: 25vw;
+    padding-bottom: 2rem;
+    font-family: "Cinzel", serif;
+
+    img {
+      padding-top: 2rem;
+      height: 20rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .Lifebar {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .bottomSection {
+    display: flex;
+
+    .CombatLog {
+      color: #910000;
+    }
   }
 }

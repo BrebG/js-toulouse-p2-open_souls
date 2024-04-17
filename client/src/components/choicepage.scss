@@ -1,0 +1,41 @@
+.choicepage {
+  height: 100vh;
+  background-image: url("../assets/images/merchant-castle-path.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.choicebutton {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.choicebutton a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.choicebutton a:hover {
+  background-color: darkblue;
+}
+
+#choicetitle {
+  align-self: flex-start;
+}
+
+h3 {
+  align-self: center;
+  margin-top: auto;
+}

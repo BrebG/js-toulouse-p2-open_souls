@@ -1,21 +1,26 @@
-import { useNavigate } from 'react-router-dom';
-import "./choicepage.scss"
+import { Link } from "react-router-dom";
+import "./choicepage.scss";
 
 function ChoiceButtons() {
-  const navigate = useNavigate();
-
-  const handleNavigation = (path) => {
-    // pour que lorsque l'on fait un page precedente ca ne marche pas pendant le jeux et eviter les glitch
-    navigate(path, { replace: true });
-  };
-
   return (
-    <div className="choicebutton">
-      <h1>Choisissez votre destination :</h1>
+    <div className="choicepage">
+      <h2 id="choicetitle">Nous sommes ici</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, quaerat
+        quidem! Quia, ipsam. Porro sint optio, nostrum ipsa temporibus aliquid
+        quod nam! Quae voluptatem saepe quas voluptas illo culpa non.
+      </p>
 
-      {/* il faut encore determiner les different lieu ou l'on pourrais faire un choix  */}
-      <button type = "button" onClick={() => handleNavigation("/choix 1")}>choix 1 </button>
-      <button type="button" onClick={() => handleNavigation("/choix 2")}>choix 2</button>
+      <h3>Faites votre choix</h3>
+      <div className="choicebutton">
+        {/* Utilisez Link à la place des boutons pour la navigation */}
+        <Link to="/choix 1" className="link-button">
+          choix 1
+        </Link>
+        <Link to="/choix 2" className="link-button">
+          choix 2
+        </Link>
+      </div>
     </div>
   );
 }

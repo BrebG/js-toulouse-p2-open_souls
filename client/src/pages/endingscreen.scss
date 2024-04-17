@@ -1,0 +1,35 @@
+.you-died-container {
+  background-image: url("../assets/images/losing-screen.webp");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000;
+  color: white;
+  font-family: "Gothic", sans-serif;
+}
+
+.you-died-text {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: red;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.retry-button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 4px #000;
+}
+
+.retry-button:hover {
+  background-color: darkgreen;
+}

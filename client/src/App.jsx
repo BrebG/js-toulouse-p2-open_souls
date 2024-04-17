@@ -1,15 +1,8 @@
 import "./App.css";
-import ChoiceButtons from "./components/ChoiceBtn";
+import YouDiedPage from "./pages/LosingScreen";
 
 function App() {
-  return (
-  
-    <ChoiceButtons/>
-
-
-    
-
-  );
+  return <YouDiedPage />;
 }
 
 export default App;

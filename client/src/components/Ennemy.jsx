@@ -26,7 +26,7 @@ function Ennemy() {
           healthPoints={sampleEnnemy.healthPoints}
           ennemyName={sampleEnnemy.name}
         />
-        {/* <p className='description'>{sampleEnnemy.description}</p> */}
+        <p className="description">{sampleEnnemy.description}</p>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 .CombatScreen {
   background-image: url("./src/assets/images/radahnBg.jpg");
   background-position: 80%;
+  height: 100vh;
 }
 
 .Lifebar {
@@ -20,13 +21,15 @@
 }
 
 .Ennemy {
+  margin: 0 auto;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
   color: black;
   padding-top: 2rem;
-  padding-left: 1rem;
+  padding-left: 25vw;
   font-family: "Cinzel", serif;
-  height: 33%;
+  height: 37vh;
 
   img {
     padding-top: 2rem;
@@ -44,6 +47,7 @@
     }
 
     .description {
+      max-width: 15rem;
       padding: 1rem;
       margin: 0;
       font-size: 0.8rem;
@@ -55,12 +59,14 @@
 }
 
 .Player {
-  height: 33%;
+  margin: 0 auto;
+  justify-content: center;
+
+  height: 37vh;
   display: flex;
   flex-direction: row;
   color: black;
-  padding-top: 2rem;
-  padding-right: 1rem;
+  padding-right: 25vw;
   padding-bottom: 2rem;
   font-family: "Cinzel", serif;
 

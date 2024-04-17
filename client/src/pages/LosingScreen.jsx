@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./endingscreen.scss";
+import "./losingscreen.scss";
 
 function YouDiedPage() {
   return (

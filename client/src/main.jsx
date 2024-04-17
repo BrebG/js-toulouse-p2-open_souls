@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./App.scss";
-import Texts from "./components/ArrayLoreDialogue";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -16,11 +15,6 @@ const router = createBrowserRouter([
   {
     path: "/character-selection",
     element: <CharSelect />,
-  },
-  {
-    path: "/Texts",
-    element: <Texts />,
-
   },
 ]);
 

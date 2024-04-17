@@ -271,9 +271,6 @@ const EldenTexts = [
         // Proposition de relancer la partie
     },
 ];
-return(
-    <p>{WCSTexts[0].content}</p>
-)
 }
 
 export default Texts;

@@ -1,5 +1,5 @@
 function CombatLog() {
-    return <div className="CombatLog" />
+  return <div className="CombatLog" />;
 }
 
 export default CombatLog;

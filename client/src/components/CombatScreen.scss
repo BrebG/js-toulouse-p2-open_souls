@@ -1,7 +1,52 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .CombatScreen {
-  background-image: url("./src/assets/images/radahnBg.jpg");
+  position: fixed;
+  top: 0%;
+  left: 0;
   background-position: 80%;
+  width: 100%;
+  height: 100%;
+  background-image: url("./src/assets/images/radahnBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
+
+  .TopSection {
+    height: 80vh;
+  }
+
+  .BottomSection {
+    display: flex;
+    height: 20vh;
+    width: 100vw;
+    border: 2px solid var(--lighter-color);
+    background: var(--main-color);
+
+    .CombatLog {
+      width: 70vw;
+      height: max-content;
+    }
+
+    .CombatAction {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 2px solid var(--lighter-color);
+      background-color: var(--main-color);
+      width: 30vw;
+
+      button {
+        border: 2px solid var(--lighter-color);
+        background-color: var(--main-color);
+        color: var(--lighter-color);
+        height: 15vh;
+      }
+    }
+  }
 
   .Lifebar {
     width: 10rem;
@@ -29,6 +74,7 @@
     padding-left: 25vw;
     font-family: "Cinzel", serif;
     height: 37vh;
+    padding-top: 15vh;
 
     img {
       padding-top: 2rem;

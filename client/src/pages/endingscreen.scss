@@ -1,0 +1,31 @@
+.victory-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../assets/images/wining-screen.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.victory-content {
+  text-align: center;
+  background: rgba(255, 253, 253, 0.5);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.victory-content h2 {
+  font-size: 2em;
+}
+
+.menu-button {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}

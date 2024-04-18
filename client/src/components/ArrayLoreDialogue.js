@@ -216,7 +216,6 @@
             // Message de la voix = ITALIQUE
             // --Combat contre le Nergigante--
             // win => loot = 2 choix  corne de chasse (+atk +def) || insectoglaive = (++atk)
-
         },
         {
             id: 19,
@@ -270,9 +269,7 @@
             content: "You have lost, would you like to restart the game?"
             // Proposition de relancer la partie
  },
-
 ];
-
 export default { EldenTexts, MHWTexts, WCSTexts };
 
 

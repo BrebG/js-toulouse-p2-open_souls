@@ -31,6 +31,7 @@ function ClassSelect() {
       <div>
         {classes.length > 0 && classes[classIndex] && (
           <div>
+            <h3>{classes[classIndex].name}</h3>
             <div className="char-select">
               <button
                 type="button"

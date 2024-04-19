@@ -39,8 +39,9 @@ function CombatScreen() {
   const receiveDamage = (damage) => {
     setTimeout(() => {
       setPlayerHealth((prevPlayerHealth) =>
-        Math.max(prevPlayerHealth - damage, 0))
-    }, 800)
+        Math.max(prevPlayerHealth - damage, 0)
+      );
+    }, 800);
   };
 
   return (
@@ -64,14 +65,18 @@ function CombatScreen() {
 
       <div className="BottomSection">
         <CombatLog />
-        {EnnemyHealth !== 0 ? <Link to="/loosing-page" className="app-button">Defeat</Link> : <Link to="/winning-page" className="app-button">
-          Victory
-        </Link>}
-
+        {EnnemyHealth !== 0 ? (
+          <Link to="/loosing-page" className="app-button">
+            Defeat
+          </Link>
+        ) : (
+          <Link to="/item-loot" className="app-button">
+            Victory
+          </Link>
+        )}
 
         <CombatAction dealDamage={dealDamage} receiveDamage={receiveDamage} />
       </div>
-
     </div>
   );
 }

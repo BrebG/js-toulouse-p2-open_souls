@@ -12,12 +12,11 @@ function ChoiceButtons() {
 
       <h3>Make your choice</h3>
       <div className="choicebutton">
-        {/* les lieu ou les link envoies sont a definir */}
-        <Link to="/loosing-page" className="link-button">
-          Choice 1
+        <Link to="/boss-fight" className="link-button">
+          choix 1
         </Link>
-        <Link to="/winning-page" className="link-button">
-          choice 2
+        <Link to="/boss-fight" className="link-button">
+          choix 2
         </Link>
       </div>
     </div>

@@ -1,0 +1,65 @@
+* {
+  margin: 0 auto;
+
+  .loot-background {
+    background-image: url("/Users/erwannboissay/WCS/project-2/js-toulouse-p2-open_souls/client/src/assets/images/loot-background.png");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right-item-img .left-item-img {
+    width: clamp(1rem, 70%, 12rem);
+    padding: 1rem;
+  }
+
+  .choice-loot {
+    color: var(--white-color);
+    text-decoration: none;
+    border: solid 2px;
+    border-radius: 30px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .choice-loot:hover {
+    color: var(--lighter-color);
+    // width: clamp(1rem, 70%, 12rem);
+  }
+
+  .loot-choice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .left-loot {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .right-loot {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .loots {
+    text-align: center;
+    padding: 1rem;
+    border: ridge 0.5rem rgba(250, 235, 215, 0.741);
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.63);
+    color: rgb(240, 255, 255);
+    button {
+      color: rgb(5, 5, 5);
+    }
+    h1 {
+      padding-bottom: 5vh;
+      padding-top: 5vh;
+    }
+  }
+}

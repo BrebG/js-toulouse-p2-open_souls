@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import CharSelect from "./pages/CharSelect";
-import ChoiceButtons from "./components/ChoiceBtn";
+import ChoiceButtons from "./pages/ChoicePage";
 import YouDiedPage from "./pages/LosingScreen";
 import VictoryPage from "./pages/WinningScreen";
 

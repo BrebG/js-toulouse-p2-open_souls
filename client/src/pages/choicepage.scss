@@ -1,14 +1,24 @@
+* {
+  margin: 0%;
+  box-sizing: border-box;
+}
 .choicepage {
   height: 100vh;
   background-image: url("../assets/images/merchant-castle-path.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0;
+  background-position: center;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+}
+
+@media (min-width: 1024px) {
+  .choicepage {
+    background-position: center;
+  }
 }
 
 #choicetitle {

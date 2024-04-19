@@ -11,7 +11,7 @@ function CharSelect() {
         <p className="text-input">Enter your name :</p>
         <input type="text" className="text-input" />
       </div>
-      <Link to="/" className="class-button">
+      <Link to="/choice-selection" className="class-button">
         START
       </Link>
     </div>

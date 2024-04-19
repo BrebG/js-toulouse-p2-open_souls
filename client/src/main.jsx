@@ -10,6 +10,7 @@ import CharSelect from "./pages/CharSelect";
 import ChoiceButtons from "./components/ChoiceBtn";
 import YouDiedPage from "./pages/LosingScreen";
 import VictoryPage from "./pages/WinningScreen";
+import CombatScreen from "./pages/CombatScreen";
 
 const router = createBrowserRouter([
   {
@@ -20,17 +21,18 @@ const router = createBrowserRouter([
     path: "/character-selection",
     element: <CharSelect />,
   },
-
   {
     path: "/choice-selection",
     element: <ChoiceButtons />,
   },
-
+  {
+    path: "/boss-fight",
+    element: <CombatScreen />,
+  },
   {
     path: "/loosing-page",
     element: <YouDiedPage />,
   },
-
   {
     path: "/winning-page",
     element: <VictoryPage />,

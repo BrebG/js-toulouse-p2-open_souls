@@ -13,10 +13,10 @@ function ChoiceButtons() {
 
       <h3>Faites votre choix</h3>
       <div className="choicebutton">
-        <Link to="/choix 1" className="link-button">
+        <Link to="/boss-fight" className="link-button">
           choix 1
         </Link>
-        <Link to="/choix 2" className="link-button">
+        <Link to="/boss-fight" className="link-button">
           choix 2
         </Link>
       </div>

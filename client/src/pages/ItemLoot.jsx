@@ -52,7 +52,7 @@ function ItemLoot() {
         <h1>Loots</h1>
         <section className="loot-choice">
           <div className="left-loot">
-            <Link to="/" className="choice-loot">
+            <Link to="/choice-selection" className="choice-loot">
               {leftItem.name}
             </Link>
             {/* rajouter le onClick */}
@@ -63,11 +63,15 @@ function ItemLoot() {
               onClick={() => setIsShownLeft(true)}
               onKeyDown={() => setIsShownLeft(true)}
             >
-              <img src={leftItem.image} alt={leftItem.name} />
+              <img
+                className="left-item-img"
+                src={leftItem.image}
+                alt={leftItem.name}
+              />
             </div>
           </div>
           <div className="right-loot">
-            <Link to="/" className="choice-loot">
+            <Link to="/winning-page" className="choice-loot">
               {rightItem.name}
             </Link>
             <div
@@ -77,7 +81,11 @@ function ItemLoot() {
               onClick={() => setIsShownRight(true)}
               onKeyDown={() => setIsShownRight(true)}
             >
-              <img src={rightItem.image} alt={rightItem.name} />
+              <img
+                className="right-item-img"
+                src={rightItem.image}
+                alt={rightItem.name}
+              />
             </div>
           </div>
           {isShownLeft && (

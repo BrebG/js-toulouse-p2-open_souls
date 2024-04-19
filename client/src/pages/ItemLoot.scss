@@ -11,6 +11,11 @@
     align-items: center;
   }
 
+  .right-item-img .left-item-img {
+    width: clamp(1rem, 70%, 12rem);
+    padding: 1rem;
+  }
+
   .choice-loot {
     color: var(--white-color);
     text-decoration: none;
@@ -21,26 +26,25 @@
   }
   .choice-loot:hover {
     color: var(--lighter-color);
-    width: clamp(1rem, 70%, 12rem);
+    // width: clamp(1rem, 70%, 12rem);
   }
 
   .loot-choice {
     display: flex;
     flex-wrap: wrap;
-    img {
-      width: clamp(1rem, 70%, 12rem);
-      padding: 0 5vw;
-    }
+    justify-content: center;
   }
 
   .left-loot {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
   }
 
   .right-loot {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
   }
 
   .loots {

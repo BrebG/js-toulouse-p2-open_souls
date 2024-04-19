@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./App.scss";
-import ItemLoot from "./pages/ItemLoot";
-import HoverItem from "./pages/HoverItem";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ItemLoot from "./pages/ItemLoot";
+
 
 import App from "./App";
 import CharSelect from "./pages/CharSelect";
+import ChoiceButtons from "./components/ChoiceBtn";
+import YouDiedPage from "./pages/LosingScreen";
+import VictoryPage from "./pages/WinningScreen";
 
 const router = createBrowserRouter([
   {
@@ -18,13 +20,24 @@ const router = createBrowserRouter([
     path: "/character-selection",
     element: <CharSelect />,
   },
+
+  {
+    path: "/choice-selection",
+    element: <ChoiceButtons />,
+  },
+
+  {
+    path: "/loosing-page",
+    element: <YouDiedPage />,
+  },
+
+  {
+    path: "/winning-page",
+    element: <VictoryPage />,
+  },
   {
     path: "/item-loot",
     element: <ItemLoot />,
-  },
-  {
-    path: "/hover-item",
-    element: <HoverItem />,
   },
 ]);
 

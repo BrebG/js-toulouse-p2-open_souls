@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./HoverItem.scss";
 
 function HoverItem() {
@@ -22,12 +22,11 @@ function HoverItem() {
   return (
     <div className="weapon-stats">
       <ul>
-        <li>{itemStats.name}</li>
+        <h1>{itemStats.name}</h1>
         <li>Strength 🗡️ {itemStatistics[0].strength[3]}</li>
         <li>Dexterity ⚔️ {itemStatistics[0].dexterity[2]}</li>
         <li>{itemStats.description}</li>
       </ul>
-      {console.log(itemStatistics.strenght)}
     </div>
   );
 }

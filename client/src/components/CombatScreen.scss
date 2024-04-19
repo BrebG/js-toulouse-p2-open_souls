@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.CombatScreen {
+  position: fixed;
+  top: 0%;
+  left: 0;
+  background-position: 80%;
+  width: 100%;
+  height: 100%;
+  background-image: url("./src/assets/images/radahnBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  .TopSection {
+    height: 80vh;
+  }
+
+  .BottomSection {
+    display: flex;
+    height: 20vh;
+    width: 100vw;
+    border: 2px solid var(--lighter-color);
+    background: var(--main-color);
+
+    .CombatLog {
+      width: 70vw;
+      height: max-content;
+    }
+
+    .CombatAction {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 2px solid var(--lighter-color);
+      background-color: var(--main-color);
+      width: 30vw;
+
+      button {
+        border: 2px solid var(--lighter-color);
+        background-color: var(--main-color);
+        color: var(--lighter-color);
+        height: 15vh;
+      }
+    }
+  }
+
+  .Lifebar {
+    width: 10rem;
+
+    p {
+      font-weight: 900;
+      margin: 0;
+    }
+
+    div {
+      background-color: #910000;
+      height: 1.2rem;
+      border-radius: 50px;
+      box-shadow: 2px;
+    }
+  }
+
+  .Ennemy {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    color: black;
+    padding-top: 2rem;
+    padding-left: 25vw;
+    font-family: "Cinzel", serif;
+    height: 37vh;
+    padding-top: 15vh;
+
+    img {
+      padding-top: 2rem;
+      height: 16.25rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        padding-top: 1rem;
+        margin: 0;
+        font-size: 0.8rem;
+      }
+
+      .description {
+        max-width: 15rem;
+        padding: 1rem;
+        margin: 0;
+        font-size: 0.8rem;
+        background-color: #1a2325e0;
+        color: #fafafa;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .Player {
+    margin: 0 auto;
+    justify-content: center;
+
+    height: 37vh;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    padding-right: 25vw;
+    padding-bottom: 2rem;
+    font-family: "Cinzel", serif;
+
+    img {
+      padding-top: 2rem;
+      height: 20rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .Lifebar {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .bottomSection {
+    display: flex;
+
+    .CombatLog {
+      color: #910000;
+    }
+  }
+}

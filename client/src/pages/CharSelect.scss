@@ -22,13 +22,14 @@
 
   h3 {
     color: var(--darker-color);
+    margin: 0.5rem;
   }
 
   .class-button {
     background-color: var(--main-color);
     padding-block: 0.5rem;
     padding-inline: 1rem;
-    color: white;
+    color: var(--white-color);
     border-radius: 999px;
     text-decoration: none;
     margin: 2rem;

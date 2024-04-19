@@ -14,6 +14,10 @@
   background-size: cover;
   background-position: center;
 
+  p {
+    margin: 0.5rem;
+  }
+
   h1 {
     font-size: clamp(2rem, 5vw, 3rem);
     text-align: center;
@@ -60,4 +64,5 @@ input {
   display: flex;
   font-weight: bold;
   color: var(--darker-color);
+  margin: 0.5rem;
 }

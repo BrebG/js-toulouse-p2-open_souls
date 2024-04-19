@@ -19,7 +19,7 @@ function ChoiceButtons() {
         <Link to="/loosing-page" className="link-button">
           Choice 1
         </Link>
-        <Link to="/winning-page" className="link-button">
+        <Link to="/boss-fight" className="link-button">
           choice 2
         </Link>
       </div>

@@ -9,7 +9,7 @@ function CharSelect() {
       <h2>Choose your class</h2>
       <ClassSelect />
       <InputName />
-      <Link to="/" className="class-button">
+      <Link to="/choice-selection" className="class-button">
         START
       </Link>
     </div>

@@ -6,6 +6,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import CharSelect from "./pages/CharSelect";
+import ChoiceButtons from "./components/ChoiceBtn";
+import YouDiedPage from "./pages/LosingScreen";
+import VictoryPage from "./pages/WinningScreen";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +18,21 @@ const router = createBrowserRouter([
   {
     path: "/character-selection",
     element: <CharSelect />,
+  },
+
+  {
+    path: "/choice-selection",
+    element: <ChoiceButtons />,
+  },
+
+  {
+    path: "/loosing-page",
+    element: <YouDiedPage />,
+  },
+
+  {
+    path: "/winning-page",
+    element: <VictoryPage />,
   },
 ]);
 

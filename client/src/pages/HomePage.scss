@@ -22,10 +22,10 @@
 
   .home-text {
     background-color: rgba(26, 35, 37, 0.7);
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 20px;
     color: var(--white-color);
-    font-size: 0.8rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
     max-width: 34rem;
     margin-bottom: 3rem;
     margin: 1rem;

@@ -1,14 +1,13 @@
-import { useState } from "react";
+import "../App";
 
 function InputName() {
-  const [name, setName] = useState("");
   return (
     <div className="inputs">
       <p className="text-input">Enter your name :</p>
       <input
         type="text"
-        value={name}
-        onChange={(event) => setName(event.target.value)}
+        // value={name}
+        // onChange={(event) => setName(event.target.value)}
       />
     </div>
   );

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./choicepage.scss";
+import "./ChoicePage.scss";
 
 function ChoiceButtons() {
   return (
@@ -15,7 +15,7 @@ function ChoiceButtons() {
         </div>
       </div>
       <h3>Make your choice</h3>
-      <div className="choicebutton">
+      <div className="choice-button">
         <Link to="/loosing-page" className="link-button">
           Choice 1
         </Link>

@@ -51,14 +51,14 @@
   }
 }
 
-.choicebutton {
+.choice-button {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
   gap: 10dvw;
 }
 
-.choicebutton a {
+.choice-button a {
   background-color: var(--main-color);
   padding-block: 0.5rem;
   padding-inline: 1rem;
@@ -68,7 +68,7 @@
   box-shadow: 0px 2px 10px var(--darker-color);
 }
 
-.choicebutton a:hover {
+.choice-button a:hover {
   background-color: var(--lighter-color);
 }
 

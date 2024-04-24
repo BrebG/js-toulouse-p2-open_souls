@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ItemLoot.scss";
 import { Link } from "react-router-dom";
-import "./HoverItem.scss";
+import "../components/HoverItem.scss";
 
 function ItemLoot() {
   const itemStatistics = [

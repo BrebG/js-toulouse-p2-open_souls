@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./choicepage.scss";
+import "./Choicepage.scss";
 
 function ChoiceButtons() {
   return (

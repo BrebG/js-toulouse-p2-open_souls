@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
 import { createContext, useContext, useMemo, useState } from "react";
 
-export const statContext = createContext();
+export const StatContext = createContext();
 
 export function StatsProvider({ children }) {
-  const [classes, setClasses] = useState([]);
+  const [chosenClass, setChosenClass] = useState([]);
 
   const statsValue = useMemo(() => ({
-      classes,
-      setClasses,
-    }), [classes]);
+    chosenClass,
+    setChosenClass,
+  }), [chosenClass]);
 
   return (
-    <statContext.Provider value={statsValue}>{children}</statContext.Provider>
+    <StatContext.Provider value={statsValue}>{children}</StatContext.Provider>
   );
 }
 StatsProvider.propTypes = {
@@ -23,5 +23,5 @@ StatsProvider.propTypes = {
 };
 
 export function useStats() {
-  return useContext(statContext);
+  return useContext(StatContext);
 }

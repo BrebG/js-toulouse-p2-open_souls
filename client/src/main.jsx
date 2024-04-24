@@ -10,6 +10,9 @@ import YouDiedPage from "./pages/LosingScreen";
 import VictoryPage from "./pages/WinningScreen";
 import CombatScreen from "./pages/CombatScreen";
 import { NameProvider } from "./contexts/NameContext";
+import { StatsProvider } from "./contexts/StatsContext";
+
+
 
 const router = createBrowserRouter([
   {
@@ -46,6 +49,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <NameProvider>
-    <RouterProvider router={router} />
+    <StatsProvider>
+      <RouterProvider router={router} />
+    </StatsProvider>
   </NameProvider>
 );

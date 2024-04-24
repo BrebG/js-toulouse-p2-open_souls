@@ -5,9 +5,9 @@ import ItemLoot from "./pages/ItemLoot";
 
 import App from "./App";
 import CharSelect from "./pages/CharSelect";
-import ChoiceButtons from "./pages/ChoicePage";
-import YouDiedPage from "./pages/LosingScreen";
-import VictoryPage from "./pages/WinningScreen";
+import ChoicePage from "./pages/ChoicePage";
+import LosingScreen from "./pages/LosingScreen";
+import WinningScreen from "./pages/WinningScreen";
 import CombatScreen from "./pages/CombatScreen";
 import { NameProvider } from "./contexts/NameContext";
 
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/choice-selection",
-    element: <ChoiceButtons />,
+    element: <ChoicePage />,
   },
   {
     path: "/boss-fight",
@@ -30,11 +30,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/loosing-page",
-    element: <YouDiedPage />,
+    element: <LosingScreen />,
   },
   {
     path: "/winning-page",
-    element: <VictoryPage />,
+    element: <WinningScreen />,
   },
   {
     path: "/item-loot",

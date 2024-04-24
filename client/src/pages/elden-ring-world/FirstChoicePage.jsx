@@ -3,7 +3,7 @@ import "./ChoicePage.scss";
 import { useState } from "react";
 import { EldenTexts } from "../../tools/ArrayLoreDialogue";
 
-function ChoicePage() {
+function FirstChoicePage() {
   const [loreIndex, setLoreIndex] = useState(0);
   const nextLore = () => {
     setLoreIndex(loreIndex + 1);
@@ -13,10 +13,9 @@ function ChoicePage() {
       <div className="story-text">
         <div className="lore-text">
           <p>{EldenTexts[loreIndex].content}</p>
-          {loreIndex === 5 && <p>{EldenTexts[6].content}</p>}
         </div>
         <div id="div-button-next">
-          {loreIndex < 5 && (
+          {loreIndex < 4 && (
             <button type="button" id="next-lore-button" onClick={nextLore}>
               &#10095;
             </button>
@@ -24,16 +23,12 @@ function ChoicePage() {
         </div>
       </div>
       <div>
-        {loreIndex === 5 && (
+        {loreIndex === 4 && (
           <div>
             <h3>Make your choice</h3>
             <div className="choice-button">
-              <Link to="/loosing-page" className="link-button">
-                Old Chest
-              </Link>
-              <Link to="/boss-fight" className="link-button">
-                Small Chest
-              </Link>
+              <Link to="/old-chest">Old Chest</Link>
+              <Link to="/small-chest">Small Chest</Link>
             </div>
           </div>
         )}
@@ -42,4 +37,4 @@ function ChoicePage() {
   );
 }
 
-export default ChoicePage;
+export default FirstChoicePage;

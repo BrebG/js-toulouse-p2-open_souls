@@ -5,11 +5,13 @@ import ItemLoot from "./pages/ItemLoot";
 
 import App from "./App";
 import CharSelect from "./pages/CharSelect";
-import ChoicePage from "./pages/elden-ring-world/ChoicePage";
+import FirstChoicePage from "./pages/elden-ring-world/FirstChoicePage";
 import LosingScreen from "./pages/LosingScreen";
 import WinningScreen from "./pages/WinningScreen";
 import CombatScreen from "./pages/CombatScreen";
 import { NameProvider } from "./contexts/NameContext";
+import OldChest from "./pages/elden-ring-world/OldChest";
+import SmallChest from "./pages/elden-ring-world/SmallChest";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/choice-selection",
-    element: <ChoicePage />,
+    element: <FirstChoicePage />,
   },
   {
     path: "/boss-fight",
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
   {
     path: "/item-loot",
     element: <ItemLoot />,
+  },
+  {
+    path: "/old-chest",
+    element: <OldChest />,
+  },
+  {
+    path: "/small-chest",
+    element: <SmallChest />,
   },
 ]);
 

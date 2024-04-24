@@ -35,8 +35,8 @@ function CharSelect() {
           &#10094;
         </button>
         {classes.map((classe, i) => (
-            i === classIndex && <ClassSelect key={classe.id} classe={classe} />
-          ))}
+          i === classIndex && <ClassSelect key={classe.id} classe={classe} />
+        ))}
         <button type="button" onClick={pickNext} className="button-index">
           &#10095;
         </button>

@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import "./App.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -6,11 +5,11 @@ import ItemLoot from "./pages/ItemLoot";
 
 import App from "./App";
 import CharSelect from "./pages/CharSelect";
-import ChoiceButtons from "./components/ChoiceBtn";
+import ChoiceButtons from "./pages/ChoicePage";
 import YouDiedPage from "./pages/LosingScreen";
 import VictoryPage from "./pages/WinningScreen";
 import CombatScreen from "./pages/CombatScreen";
-// import { StatsProvider } from "./contexts/StatsContext";
+import { NameProvider } from "./contexts/NameContext";
 
 const router = createBrowserRouter([
   {
@@ -46,9 +45,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.StrictMode>
-    {/* <StatsProvider> */}
+  <NameProvider>
     <RouterProvider router={router} />
-    {/* </StatsProvider> */}
-  </React.StrictMode>
+  </NameProvider>
 );

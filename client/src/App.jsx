@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
-import "./App.scss";
+import HomePage from "./pages/Homepage";
 
 function App() {
   return (
-    <Link to="character-selection" className="app-button">
-      NEXT
-    </Link>
+    <div>
+      <HomePage />
+    </div>
   );
 }
 

@@ -29,7 +29,7 @@ function CharStats({ classIndex }) {
 }
 
 CharStats.propTypes = {
-  classIndex: PropTypes.string.isRequired, // Définition de PropTypes pour classIndex
+  classIndex: PropTypes.string.isRequired,
 };
 
 export default CharStats;

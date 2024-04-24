@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./losingscreen.scss";
 
-function YouDiedPage() {
+function LosingScreen() {
   const soundPath = "./src/assets/sound/sword-button.wav";
 
   const audio = new Audio(soundPath);
@@ -20,4 +20,4 @@ function YouDiedPage() {
   );
 }
 
-export default YouDiedPage;
+export default LosingScreen;

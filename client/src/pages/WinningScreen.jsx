@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import "./Endingscreen.scss";
+import "./LosingScreen";
+import "./WinningScreen.scss";
 
-function VictoryPage() {
+function WinningScreen() {
   return (
     <div className="victory-container">
       <div className="victory-content">
@@ -18,4 +19,4 @@ function VictoryPage() {
   );
 }
 
-export default VictoryPage;
+export default WinningScreen;

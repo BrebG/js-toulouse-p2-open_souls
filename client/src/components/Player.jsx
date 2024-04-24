@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./CombatScreen.scss";
+import "../pages/CombatScreen.scss";
 import PlayerLifebar from "./PlayerLifebar";
 
 function Player({ image, PlayerName, PlayerHealth }) {

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import InputCode from "../components/InputCode";
-import "./HomePage.scss";
+import "./Homepage.scss";
 
-function HomePage() {
+function Homepage() {
   return (
     <div className="home">
       <h1>Open Souls</h1>
@@ -33,4 +33,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Homepage;

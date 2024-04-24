@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./CombatScreen.scss";
+import "../pages/CombatScreen.scss";
 import EnnemyLifebar from "./EnnemyLifebar";
 
 function Ennemy({ image, EnnemyName, EnnemyHealth }) {

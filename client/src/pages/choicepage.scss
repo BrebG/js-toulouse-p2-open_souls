@@ -2,7 +2,7 @@
   margin: 0%;
   box-sizing: border-box;
 }
-.choicepage {
+.choice-page {
   height: 100vh;
   background-image: url("../assets/images/adventure-pannel-background.png");
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@
   padding: 20px;
   bottom: 10rem;
 
-  .storytext {
+  .story-text {
     height: 110dvh;
     display: flex;
     flex-direction: column;
@@ -30,13 +30,13 @@
   }
 }
 
-#choicetitle {
+#choice-title {
   color: white;
   display: flex;
   justify-content: center;
 }
 
-.loretext {
+.lore-text {
   text-align: center;
   background: rgba(26, 35, 37, 0.7);
   padding: 20px;
@@ -45,7 +45,7 @@
   align-items: center;
   justify-content: center;
 
-  #choicetext {
+  #choice-text {
     max-width: 65dvh;
     color: var(--white-color);
   }

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import "./ChoicePage.scss";
 
-function ChoiceButtons() {
+function ChoicePage() {
   return (
-    <div className="choicepage">
-      <div className="storytext">
-        <div className="loretext">
-          <p id="choicetext">
+    <div className="choice-page">
+      <div className="story-text">
+        <div className="lore-text">
+          <p id="choice-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius,
             quaerat quidem! Quia, ipsam. Porro sint optio, nostrum ipsa
             temporibus aliquid quod nam! Quae voluptatem saepe quas voluptas
@@ -27,4 +27,4 @@ function ChoiceButtons() {
   );
 }
 
-export default ChoiceButtons;
+export default ChoicePage;

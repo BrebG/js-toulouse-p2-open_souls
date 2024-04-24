@@ -10,6 +10,7 @@ import ChoiceButtons from "./pages/ChoicePage";
 import YouDiedPage from "./pages/LosingScreen";
 import VictoryPage from "./pages/WinningScreen";
 import CombatScreen from "./pages/CombatScreen";
+import { StatsProvider } from "./context/statscontext";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <StatsProvider>
+      <RouterProvider router={router} />
+    </StatsProvider>
   </React.StrictMode>
 );

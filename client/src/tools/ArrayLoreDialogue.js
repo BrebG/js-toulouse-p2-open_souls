@@ -1,4 +1,4 @@
-const EldenTexts = [
+export const EldenTexts = [
   {
     id: 1,
     content:
@@ -137,7 +137,7 @@ const EldenTexts = [
   // C'est votre arriver dans la première zone de MHW
 ];
 // MONDE DE MONSTER HUNTER WORLD
-const MHWTexts = [
+export const MHWTexts = [
   {
     id: 1,
     content:
@@ -247,7 +247,7 @@ const MHWTexts = [
       "Once again, you fall into the void; you're not so scared anymore, beginning to get used to it, knowing at least you won't be unconscious during the journey. Unfortunately, your shield hits your head; you black out.",
   },
 ];
-const WCSTexts = [
+export const WCSTexts = [
   // DEBUT DU MONDE WILD CODE SCHOOL
   {
     id: 1,
@@ -300,4 +300,3 @@ const WCSTexts = [
     // Proposition de relancer la partie
   },
 ];
-export default { EldenTexts, MHWTexts, WCSTexts };

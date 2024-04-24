@@ -5,7 +5,7 @@ import ItemLoot from "./pages/ItemLoot";
 
 import App from "./App";
 import CharSelect from "./pages/CharSelect";
-import ChoicePage from "./pages/ChoicePage";
+import ChoicePage from "./pages/elden-ring-world/ChoicePage";
 import LosingScreen from "./pages/LosingScreen";
 import WinningScreen from "./pages/WinningScreen";
 import CombatScreen from "./pages/CombatScreen";

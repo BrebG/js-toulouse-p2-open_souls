@@ -1,5 +1,5 @@
 .you-died-container {
-  background-image: url("../assets/images/losing-screen.webp");
+  background-image: url("../assets/images/loosing-screen-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -10,7 +10,6 @@
   height: 100vh;
   background-color: #000;
   color: white;
-  font-family: "Gothic", sans-serif;
 }
 
 .you-died-text {
@@ -18,21 +17,25 @@
   margin: 20px 0;
   color: red;
   text-shadow: 2px 2px 4px #000;
-  box-shadow: rgba(219, 0, 0, 0.35) 0px 5px 15px;
+
   width: 100%;
   text-align: center;
-  background-color: #0000003d;
+  background-color: rgba(26, 35, 37, 0.7);
+  padding: 2rem;
 }
 
 .retry-button {
-  padding: 10px 20px;
-  margin-top: 20px;
-  font-size: 1rem;
-  color: white;
-  background-color: rgb(21, 0, 128);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-transform: uppercase;
-  box-shadow: 2px 2px 4px #000;
+  background-color: var(--main-color);
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  color: var(--white-color);
+  border-radius: 999px;
+  text-decoration: none;
+  margin: 2rem;
+
+  box-shadow: 0px 2px 10px var(--darker-color);
+}
+
+.retry-button:hover {
+  background-color: var(--lighter-color);
 }

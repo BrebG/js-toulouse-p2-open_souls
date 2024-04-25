@@ -28,7 +28,7 @@ function LastChoice() {
             <h3>Make your choice</h3>
             <div className="choice-button">
               <Link to="/sneak-past">{EldenTexts[16].content}</Link>
-              <Link to="/reduvia">{EldenTexts[17].content}</Link>
+              <Link to="/loot-reduvia">{EldenTexts[17].content}</Link>
             </div>
           </div>
         )}

@@ -1,16 +1,16 @@
 import PropTypes from "prop-types";
 
-function Lifebar({ EnnemyHealth, ennemyName }) {
+function Lifebar({ EnnemyHealth, EnnemyName }) {
   return (
     <div className="Lifebar">
-      <p>{ennemyName}</p>
+      <p>{EnnemyName}</p>
       <div style={{ width: `${EnnemyHealth}%` }}>{EnnemyHealth}%</div>
     </div>
   );
 }
 
 Lifebar.propTypes = {
-  ennemyName: PropTypes.string.isRequired,
+  EnnemyName: PropTypes.string.isRequired,
   EnnemyHealth: PropTypes.number.isRequired,
 };
 

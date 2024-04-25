@@ -7,7 +7,7 @@ function Ennemy({ image, EnnemyName, EnnemyHealth }) {
     <div className="Ennemy">
       <img src={image} alt={EnnemyName} />
       <div>
-        <EnnemyLifebar EnnemyHealth={EnnemyHealth} />
+        <EnnemyLifebar EnnemyHealth={EnnemyHealth} EnnemyName={EnnemyName} />
       </div>
     </div>
   );

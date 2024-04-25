@@ -7,7 +7,7 @@ function Player({ image, PlayerName, PlayerHealth }) {
     <div className="Player">
       <img src={image} alt={PlayerName} />
       <div>
-        <PlayerLifebar PlayerHealth={PlayerHealth} />
+        <PlayerLifebar PlayerHealth={PlayerHealth} PlayerName={PlayerName} />
       </div>
     </div>
   );

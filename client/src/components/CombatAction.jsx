@@ -4,15 +4,26 @@ import { useStats } from "../contexts/StatsContext";
 
 function CombatAction({ dealDamage, receiveDamage }) {
   const [isButtonDisabled, setButtonDisabled] = useState(false);
-
-  const disableButton = () => {
-    setButtonDisabled(true);
-    setTimeout(() => {
-      setButtonDisabled(false);
-    }, 2000);
-  };
-
   const { chosenClass } = useStats();
+
+  const disableButtonLight = () => {
+    setButtonDisabled(true);
+    setTimeout(
+      () => {
+        setButtonDisabled(false);
+      },
+      1000 - chosenClass.stats.dexterity * 100
+    );
+  };
+  const disableButtonHeavy = () => {
+    setButtonDisabled(true);
+    setTimeout(
+      () => {
+        setButtonDisabled(false);
+      },
+      2000 - chosenClass.stats.dexterity * 100
+    );
+  };
 
   return (
     <div className="CombatAction">
@@ -22,7 +33,7 @@ function CombatAction({ dealDamage, receiveDamage }) {
         onClick={() => {
           dealDamage(10 * (chosenClass.stats.strength / 10));
           receiveDamage(10);
-          disableButton();
+          disableButtonLight();
         }}
       >
         Light attack
@@ -33,12 +44,12 @@ function CombatAction({ dealDamage, receiveDamage }) {
         onClick={() => {
           dealDamage(20 * (chosenClass.stats.strength / 10));
           receiveDamage(10);
+          disableButtonHeavy();
         }}
       >
         Heavy attack
       </button>
     </div>
-
   );
 }
 

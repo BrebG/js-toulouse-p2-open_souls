@@ -4,12 +4,19 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ItemLoot from "./pages/ItemLoot";
 import App from "./App";
 import CharSelect from "./pages/CharSelect";
-import ChoicePage from "./pages/ChoicePage";
+import FirstChoicePage from "./pages/elden-ring-world/FirstChoicePage";
 import LosingScreen from "./pages/LosingScreen";
 import WinningScreen from "./pages/WinningScreen";
 import CombatScreen from "./pages/CombatScreen";
 import { NameProvider } from "./contexts/NameContext";
 import { StatsProvider } from "./contexts/StatsContext";
+import OldChest from "./pages/elden-ring-world/OldChest";
+import SmallChest from "./pages/elden-ring-world/SmallChest";
+import MimicChoice from "./pages/elden-ring-world/MimicChoice";
+import OpenChest from "./pages/elden-ring-world/OpenChest";
+import LastChoice from "./pages/elden-ring-world/LastChoice";
+import Reduvia from "./pages/elden-ring-world/Reduvia";
+import SneakPast from "./pages/elden-ring-world/SneakPast";
 import Loot1 from "./pages/elden-ring-world/elden-ring-loot/Loot1";
 
 const router = createBrowserRouter([
@@ -23,7 +30,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/choice-selection",
-    element: <ChoicePage />,
+    element: <FirstChoicePage />,
   },
   {
     path: "/boss-fight",
@@ -45,6 +52,34 @@ const router = createBrowserRouter([
   {
     path: "/loot-1",
     element: <Loot1 />,
+  },
+  {
+    path: "/old-chest",
+    element: <OldChest />,
+  },
+  {
+    path: "/small-chest",
+    element: <SmallChest />,
+  },
+  {
+    path: "/mimic-choice",
+    element: <MimicChoice />,
+  },
+  {
+    path: "/open-chest",
+    element: <OpenChest />,
+  },
+  {
+    path: "/last-choice",
+    element: <LastChoice />,
+  },
+  {
+    path: "/reduvia",
+    element: <Reduvia />,
+  },
+  {
+    path: "/sneak-past",
+    element: <SneakPast />,
   },
 ]);
 

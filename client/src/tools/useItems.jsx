@@ -37,16 +37,20 @@ function useItems() {
   async function getGear() {
     try {
       const weaponLoot = await Promise.all(
-        attackStuff.map(async (item) => fetch(
-            `https://eldenring.fanapis.com/api/weapons/${item.id}`
-          ).then((res) => res.json()))
+        attackStuff.map(async (item) =>
+          fetch(`https://eldenring.fanapis.com/api/weapons/${item.id}`).then(
+            (res) => res.json()
+          )
+        )
       );
       setWeaponStuff(weaponLoot.map((el) => el.data));
 
       const shieldLoot = await Promise.all(
-        defenseStuff.map(async (item) => fetch(
-            `https://eldenring.fanapis.com/api/shields/${item.id}`
-          ).then((res) => res.json()))
+        defenseStuff.map(async (item) =>
+          fetch(`https://eldenring.fanapis.com/api/shields/${item.id}`).then(
+            (res) => res.json()
+          )
+        )
       );
       setShieldStuff(shieldLoot.map((el) => el.data));
     } catch (error) {

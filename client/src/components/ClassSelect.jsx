@@ -1,61 +1,33 @@
-import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 import "./ClassSelect.scss";
 import CharStats from "./CharStats";
 
-function ClassSelect() {
-  const [classIndex, setClassIndex] = useState(0);
-  const [classes, setClasses] = useState([]);
-
-  useEffect(() => {
-    fetch("https://eldenring.fanapis.com/api/classes")
-      .then((response) => response.json())
-      .then((data) => {
-        setClasses(data.data || []);
-      })
-      .catch((error) => console.error(error));
-  }, []);
-
-  const pickPrevious = () => {
-    if (classIndex > 0) {
-      setClassIndex(classIndex - 1);
-    }
-  };
-  const pickNext = () => {
-    if (classIndex < classes.length - 1) {
-      setClassIndex(classIndex + 1);
-    }
-  };
-
+function ClassSelect({ classe }) {
   return (
     <div className="class-select">
       <div>
-        {classes.length > 0 && classes[classIndex] && (
-          <div>
-            <h3>{classes[classIndex].name}</h3>
-            <div className="char-select">
-              <button
-                type="button"
-                onClick={pickPrevious}
-                className="button-index"
-              >
-                &#10094;
-              </button>
-              <img
-                src={classes[classIndex].image}
-                alt={classes[classIndex].name}
-                className="class-image"
-              />
-
-              <button type="button" onClick={pickNext} className="button-index">
-                &#10095;
-              </button>
-            </div>
-            <CharStats classIndex={classIndex} />
+        <div>
+          <div className="char-select">
+            <img src={classe.image} alt={classe.name} className="class-image" />
           </div>
-        )}
+          <CharStats classe={classe} />
+        </div>
       </div>
     </div>
   );
 }
+
+ClassSelect.propTypes = {
+  classe: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+      level: PropTypes.number.isRequired,
+      vigor: PropTypes.number.isRequired,
+      strength: PropTypes.number.isRequired,
+      dexterity: PropTypes.number.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default ClassSelect;

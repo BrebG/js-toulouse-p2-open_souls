@@ -1,35 +1,27 @@
-import { useEffect, useState } from "react";
-import "./CharStats.scss";
 import PropTypes from "prop-types";
+import "./CharStats.scss";
 
-function CharStats({ classIndex }) {
-  const [classes, setClasses] = useState([]);
-
-  useEffect(() => {
-    fetch("https://eldenring.fanapis.com/api/classes")
-      .then((response) => response.json())
-      .then((data) => {
-        setClasses(data.data || []);
-      })
-      .catch((error) => console.error(error));
-  }, []);
-
+function CharStats({ classe }) {
   return (
     <div className="character-stats">
-      {classes.length > 0 && classes[classIndex] && (
-        <ul>
-          <li>Level : {classes[classIndex].stats.level}</li>
-          <li>Vigor : {classes[classIndex].stats.vigor}</li>
-          <li>Strenght : {classes[classIndex].stats.strength}</li>
-          <li>Dexterity : {classes[classIndex].stats.dexterity}</li>
-        </ul>
-      )}
+      <ul>
+        <li>Level : {classe.stats.level}</li>
+        <li>Vigor : {classe.stats.vigor}</li>
+        <li>Strenght : {classe.stats.strength}</li>
+        <li>Dexterity : {classe.stats.dexterity}</li>
+      </ul>
     </div>
   );
 }
-
 CharStats.propTypes = {
-  classIndex: PropTypes.string.isRequired,
+  classe: PropTypes.shape({
+    stats: PropTypes.shape({
+      level: PropTypes.number.isRequired,
+      vigor: PropTypes.number.isRequired,
+      strength: PropTypes.number.isRequired,
+      dexterity: PropTypes.number.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default CharStats;

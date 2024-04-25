@@ -7,7 +7,8 @@ import CharSelect from "./pages/CharSelect";
 import FirstChoicePage from "./pages/elden-ring-world/FirstChoicePage";
 import LosingScreen from "./pages/LosingScreen";
 import WinningScreen from "./pages/WinningScreen";
-import CombatScreen from "./pages/CombatScreen";
+import CombatScreenRadahn from "./pages/CombatScreenRadahn";
+import CombatScreenGodefrey from "./pages/CombatScreenGodefroy";
 import ItemArray from "./tools/ItemArray";
 import { NameProvider } from "./contexts/NameContext";
 import { StatsProvider } from "./contexts/StatsContext";
@@ -33,8 +34,12 @@ const router = createBrowserRouter([
     element: <FirstChoicePage />,
   },
   {
-    path: "/boss-fight",
-    element: <CombatScreen />,
+    path: "/boss-fight-godefroy",
+    element: <CombatScreenGodefrey />,
+  },
+  {
+    path: "/boss-fight-radahn",
+    element: <CombatScreenRadahn />,
   },
   {
     path: "/loosing-page",

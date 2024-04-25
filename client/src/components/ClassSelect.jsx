@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import "./ClassSelect.scss";
-import PropTypes from "prop-types";
 import CharStats from "./CharStats";
 
 function ClassSelect({ classe }) {

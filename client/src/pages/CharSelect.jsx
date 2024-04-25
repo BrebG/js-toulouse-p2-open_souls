@@ -3,6 +3,7 @@ import "./CharSelect.scss";
 import { useEffect, useState } from "react";
 import ClassSelect from "../components/ClassSelect";
 import { useStats } from "../contexts/StatsContext"
+import InputName from "../components/InputName";
 
 function CharSelect() {
   const [classIndex, setClassIndex] = useState(0);
@@ -44,10 +45,7 @@ function CharSelect() {
           &#10095;
         </button>
       </div>
-      <div className="inputs">
-        <p className="text-input">Enter your name :</p>
-        <input type="text" className="text-input" />
-      </div>
+      <InputName />
       <Link to="/choice-selection" className="class-button" onClick={setChosenClass(classes[classIndex])}>
         START
       </Link>

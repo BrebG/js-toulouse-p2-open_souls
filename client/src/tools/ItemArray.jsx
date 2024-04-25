@@ -6,35 +6,6 @@ function ItemArray() {
   const [weaponStuff, setWeaponStuff] = useState(0);
   const [shieldStuff, setShieldStuff] = useState(0);
 
-  // const [weaponStuff,setWeaponStuff,shieldStuff,setShieldStuff] = useItem() constante du context
-
-  async function getGear() {
-    try {
-      const weaponStuff = await Promise.all(
-        attackStuff.map(async (item) => {
-          return fetch(
-            `https://eldenring.fanapis.com/api/weapons/${item.id}`
-          ).then((res) => res.json());
-        })
-      );
-      const shieldStuff = await Promise.all(
-        defenseStuff.map(async (item) => {
-          return fetch(
-            `https://eldenring.fanapis.com/api/shields/${item.id}`
-          ).then((res) => res.json());
-        })
-      );
-      console.log(weaponStuff);
-      console.log(shieldStuff);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  useEffect(() => {
-    getGear();
-  }, []);
-
   const attackStuff = [
     {
       id: "17f69728e6al0i1peyh4scwxfhl357",
@@ -61,10 +32,37 @@ function ItemArray() {
     },
   ];
 
+  // const [weaponStuff,setWeaponStuff,shieldStuff,setShieldStuff] = useItem() constante du context
+
+  async function getGear() {
+    try {
+      const weaponLoot = await Promise.all(
+        attackStuff.map(async (item) => fetch(
+          `https://eldenring.fanapis.com/api/weapons/${item.id}`
+        ).then((res) => res.json()))
+      );
+
+      setWeaponStuff(weaponLoot.map((el) => el.data));
+      const shieldLoot = await Promise.all(
+        defenseStuff.map(async (item) => fetch(
+          `https://eldenring.fanapis.com/api/shields/${item.id}`
+        ).then((res) => res.json()))
+      );
+
+      setShieldStuff(shieldLoot.map((el) => el.data));
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  useEffect(() => {
+    getGear();
+  }, []);
+
   return (
     <div>
-      {setWeaponStuff && <p>{weaponStuff.name}</p>}
-      {shieldStuff.name}
+      {setWeaponStuff && <p>{weaponStuff[0]?.name}</p>}
+      {setShieldStuff && <p>{shieldStuff[0]?.name}</p>}
     </div>
   );
 }

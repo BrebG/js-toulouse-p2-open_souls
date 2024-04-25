@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
+// import { useStats } from "../contexts/StatsContext";
 
 function CombatAction({ dealDamage, receiveDamage }) {
+  // const { classe } = useStats()
   return (
     <div className="CombatAction">
       <button

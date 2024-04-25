@@ -8,9 +8,9 @@ import ChoicePage from "./pages/ChoicePage";
 import LosingScreen from "./pages/LosingScreen";
 import WinningScreen from "./pages/WinningScreen";
 import CombatScreen from "./pages/CombatScreen";
-import ItemArray from "./tools/ItemArray";
 import { NameProvider } from "./contexts/NameContext";
 import { StatsProvider } from "./contexts/StatsContext";
+import Loot1 from "./pages/elden-ring-world/elden-ring-loot/Loot1";
 
 const router = createBrowserRouter([
   {
@@ -41,9 +41,10 @@ const router = createBrowserRouter([
     path: "/item-loot",
     element: <ItemLoot />,
   },
+
   {
-    path: "/array-item",
-    element: <ItemArray />,
+    path: "/loot-1",
+    element: <Loot1 />,
   },
 ]);
 

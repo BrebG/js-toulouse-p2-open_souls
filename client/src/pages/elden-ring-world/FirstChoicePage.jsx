@@ -5,9 +5,11 @@ import { EldenTexts } from "../../tools/ArrayLoreDialogue";
 
 function FirstChoicePage() {
   const [loreIndex, setLoreIndex] = useState(0);
+
   const nextLore = () => {
     setLoreIndex(loreIndex + 1);
   };
+
   return (
     <div className="choice-page">
       <div className="story-text">

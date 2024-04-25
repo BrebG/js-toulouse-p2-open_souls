@@ -12,6 +12,11 @@ import CombatScreen from "./pages/CombatScreen";
 import { NameProvider } from "./contexts/NameContext";
 import OldChest from "./pages/elden-ring-world/OldChest";
 import SmallChest from "./pages/elden-ring-world/SmallChest";
+import MimicChoice from "./pages/elden-ring-world/MimicChoice";
+import OpenChest from "./pages/elden-ring-world/OpenChest";
+import LastChoice from "./pages/elden-ring-world/LastChoice";
+import Reduvia from "./pages/elden-ring-world/Reduvia";
+import SneakPast from "./pages/elden-ring-world/SneakPast";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +54,26 @@ const router = createBrowserRouter([
   {
     path: "/small-chest",
     element: <SmallChest />,
+  },
+  {
+    path: "/mimic-choice",
+    element: <MimicChoice />,
+  },
+  {
+    path: "/open-chest",
+    element: <OpenChest />,
+  },
+  {
+    path: "/last-choice",
+    element: <LastChoice />,
+  },
+  {
+    path: "/reduvia",
+    element: <Reduvia />,
+  },
+  {
+    path: "/sneak-past",
+    element: <SneakPast />,
   },
 ]);
 

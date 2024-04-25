@@ -62,7 +62,8 @@ export const EldenTexts = [
   },
   {
     id: 12,
-    content: "It was a Mimic that you defeated.",
+    content:
+      "It was a Mimic but he was stronger than you. He took the upper hand on you.",
     // Si, on ouvre le coffre, alors, perte de ___% d'hp | faible % de chance d'être tué avec un lancé de dés.
   },
   {
@@ -78,17 +79,17 @@ export const EldenTexts = [
   },
   {
     id: 15,
-    content: "Beware, appearances can sometimes be deceptive in this world.",
+    content: "Continue on your way or search the body ?",
     // C'est une phrase de la voix, à mettre en ITALIQUE
   },
   {
     id: 16,
-    content: "Sneak past.",
+    content: "Sneak past",
     // Rien ne se passe vous courez pour vous éloigner du cadavre et tombez au sol ___% pv en fonction du jet de dés
   },
   {
     id: 17,
-    content: "Take the dagger.",
+    content: "Take the dagger",
     // Vous obtenez la dague "Reduvia", une dague puissante
   },
   {

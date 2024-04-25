@@ -18,6 +18,9 @@ import LastChoice from "./pages/elden-ring-world/LastChoice";
 import Reduvia from "./pages/elden-ring-world/Reduvia";
 import SneakPast from "./pages/elden-ring-world/SneakPast";
 import Loot1 from "./pages/elden-ring-world/elden-ring-loot/Loot1";
+import LootReduvia from "./pages/elden-ring-world/elden-ring-loot/LootReduvia";
+import LootNagakiba from "./pages/elden-ring-world/elden-ring-loot/LootNagakiba";
+import LootSword from "./pages/elden-ring-world/elden-ring-loot/LootSword";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +40,10 @@ const router = createBrowserRouter([
     element: <CombatScreen />,
   },
   {
+    path: "/loot-1",
+    element: <Loot1 />,
+  },
+  {
     path: "/loosing-page",
     element: <LosingScreen />,
   },
@@ -45,21 +52,20 @@ const router = createBrowserRouter([
     element: <WinningScreen />,
   },
   {
-    path: "/item-loot",
-    element: <ItemLoot />,
-  },
-
-  {
-    path: "/loot-1",
-    element: <Loot1 />,
-  },
-  {
     path: "/old-chest",
     element: <OldChest />,
   },
   {
+    path: "/loot-nagakiba",
+    element: <LootNagakiba />,
+  },
+  {
     path: "/small-chest",
     element: <SmallChest />,
+  },
+  {
+    path: "/loot-sword",
+    element: <LootSword />,
   },
   {
     path: "/mimic-choice",
@@ -76,6 +82,10 @@ const router = createBrowserRouter([
   {
     path: "/reduvia",
     element: <Reduvia />,
+  },
+  {
+    path: "/loot-reduvia",
+    element: <LootReduvia />,
   },
   {
     path: "/sneak-past",

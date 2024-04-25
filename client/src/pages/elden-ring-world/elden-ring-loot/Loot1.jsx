@@ -19,7 +19,7 @@ function Loot1() {
         <h1>Loots</h1>
         <section className="loot-choice">
           <div className="left-loot">
-            <Link to="/choice-selection" className="choice-loot">
+            <Link to="/mimic-choice" className="choice-loot">
               <p>{shieldStuff[0]?.name}</p>
             </Link>
             {/* rajouter le onClick */}
@@ -38,7 +38,7 @@ function Loot1() {
             </div>
           </div>
           <div className="right-loot">
-            <Link to="/winning-page" className="choice-loot">
+            <Link to="/mimic-choice" className="choice-loot">
               <p>{shieldStuff[1]?.name}</p>
             </Link>
             <div
@@ -59,7 +59,7 @@ function Loot1() {
             <div className="weapon-stats-left">
               <ul>
                 <p>{shieldStuff[0]?.name}</p>
-                <li>defence 🗡️ {shieldStuff[0]?.defence[0].ammount}</li>
+                <li>defence 🗡️ {shieldStuff[0]?.defence[0].amount}</li>
                 <li>{shieldStuff[0]?.description}</li>
               </ul>
             </div>
@@ -68,7 +68,7 @@ function Loot1() {
             <div className="weapon-stats-right">
               <ul>
                 <p>{shieldStuff[1]?.name}</p>
-                <li>defence 🗡️ {shieldStuff[0]?.defence[0].ammount}</li>
+                <li>defence 🗡️ {shieldStuff[0]?.defence[0].amount}</li>
                 <li>{shieldStuff[0]?.description}</li>
               </ul>
             </div>

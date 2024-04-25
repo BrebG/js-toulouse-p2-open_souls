@@ -29,8 +29,8 @@ function FirstChoicePage() {
           <div>
             <h3>Make your choice</h3>
             <div className="choice-button">
-              <Link to="/old-chest">Old Chest</Link>
-              <Link to="/small-chest">Small Chest</Link>
+              <Link to="/loot-nagakiba">Old Chest</Link>
+              <Link to="/loot-sword">Small Chest</Link>
             </div>
           </div>
         )}

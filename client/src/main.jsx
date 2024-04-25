@@ -2,13 +2,13 @@ import ReactDOM from "react-dom/client";
 import "./App.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ItemLoot from "./pages/ItemLoot";
-
 import App from "./App";
 import CharSelect from "./pages/CharSelect";
 import ChoicePage from "./pages/ChoicePage";
 import LosingScreen from "./pages/LosingScreen";
 import WinningScreen from "./pages/WinningScreen";
 import CombatScreen from "./pages/CombatScreen";
+import ItemArray from "./tools/ItemArray";
 import { NameProvider } from "./contexts/NameContext";
 import { StatsProvider } from "./contexts/StatsContext";
 
@@ -40,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/item-loot",
     element: <ItemLoot />,
+  },
+  {
+    path: "/array-item",
+    element: <ItemArray />,
   },
 ]);
 

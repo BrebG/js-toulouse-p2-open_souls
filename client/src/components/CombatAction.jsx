@@ -15,7 +15,7 @@ function CombatAction({ dealDamage, receiveDamage }) {
       <button
         type="button"
         onClick={() => {
-          dealDamage(30);
+          dealDamage(20);
           receiveDamage(10);
         }}
       >

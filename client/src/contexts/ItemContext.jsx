@@ -3,7 +3,7 @@ import { createContext, useContext, useMemo, useState } from "react";
 
 export const ItemContext = createContext();
 
-export function Itemprovider({ children }) {
+export function ItemProvider({ children }) {
   const [item, setItem] = useState("");
 
   const itemValue = useMemo(() => ({ item, setItem }), [item]);

@@ -2,13 +2,12 @@ import { Link } from "react-router-dom";
 import "./CharSelect.scss";
 import { useEffect, useState } from "react";
 import ClassSelect from "../components/ClassSelect";
-import { useStats } from "../contexts/StatsContext"
+import { useStats } from "../contexts/StatsContext";
 
 function CharSelect() {
   const [classIndex, setClassIndex] = useState(0);
   const [classes, setClasses] = useState([]);
   const { setChosenClass } = useStats();
-
 
   useEffect(() => {
     fetch("https://eldenring.fanapis.com/api/classes")
@@ -37,9 +36,10 @@ function CharSelect() {
         <button type="button" onClick={pickPrevious} className="button-index">
           &#10094;
         </button>
-        {classes.map((classe, i) => (
-          i === classIndex && <ClassSelect key={classe.id} classe={classe} />
-        ))}
+        {classes.map(
+          (classe, i) =>
+            i === classIndex && <ClassSelect key={classe.id} classe={classe} />
+        )}
         <button type="button" onClick={pickNext} className="button-index">
           &#10095;
         </button>
@@ -48,7 +48,11 @@ function CharSelect() {
         <p className="text-input">Enter your name :</p>
         <input type="text" className="text-input" />
       </div>
-      <Link to="/choice-selection" className="class-button" onClick={setChosenClass(classes[classIndex])}>
+      <Link
+        to="/choice-selection"
+        className="class-button"
+        onClick={setChosenClass(classes[classIndex])}
+      >
         START
       </Link>
     </div>

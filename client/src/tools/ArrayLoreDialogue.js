@@ -1,4 +1,4 @@
-const EldenTexts = [
+export const EldenTexts = [
   {
     id: 1,
     content:
@@ -62,7 +62,8 @@ const EldenTexts = [
   },
   {
     id: 12,
-    content: "It was a Mimic that you defeated.",
+    content:
+      "It was a Mimic but he was stronger than you. He took the upper hand on you.",
     // Si, on ouvre le coffre, alors, perte de ___% d'hp | faible % de chance d'être tué avec un lancé de dés.
   },
   {
@@ -78,17 +79,17 @@ const EldenTexts = [
   },
   {
     id: 15,
-    content: "Beware, appearances can sometimes be deceptive in this world.",
+    content: "Continue on your way or search the body ?",
     // C'est une phrase de la voix, à mettre en ITALIQUE
   },
   {
     id: 16,
-    content: "Sneak past.",
+    content: "Sneak past",
     // Rien ne se passe vous courez pour vous éloigner du cadavre et tombez au sol ___% pv en fonction du jet de dés
   },
   {
     id: 17,
-    content: "Take the dagger.",
+    content: "Take the dagger",
     // Vous obtenez la dague "Reduvia", une dague puissante
   },
   {
@@ -137,7 +138,7 @@ const EldenTexts = [
   // C'est votre arriver dans la première zone de MHW
 ];
 // MONDE DE MONSTER HUNTER WORLD
-const MHWTexts = [
+export const MHWTexts = [
   {
     id: 1,
     content:
@@ -247,7 +248,7 @@ const MHWTexts = [
       "Once again, you fall into the void; you're not so scared anymore, beginning to get used to it, knowing at least you won't be unconscious during the journey. Unfortunately, your shield hits your head; you black out.",
   },
 ];
-const WCSTexts = [
+export const WCSTexts = [
   // DEBUT DU MONDE WILD CODE SCHOOL
   {
     id: 1,
@@ -300,4 +301,3 @@ const WCSTexts = [
     // Proposition de relancer la partie
   },
 ];
-export default { EldenTexts, MHWTexts, WCSTexts };

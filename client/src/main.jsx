@@ -1,13 +1,13 @@
 import ReactDOM from "react-dom/client";
 import "./App.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ItemLoot from "./pages/ItemLoot";
 import App from "./App";
 import CharSelect from "./pages/CharSelect";
 import FirstChoicePage from "./pages/elden-ring-world/FirstChoicePage";
 import LosingScreen from "./pages/LosingScreen";
 import WinningScreen from "./pages/WinningScreen";
-import CombatScreen from "./pages/CombatScreen";
+import CombatScreenRadahn from "./pages/CombatScreenRadahn";
+import CombatScreenGodefrey from "./pages/CombatScreenGodefroy";
 import { NameProvider } from "./contexts/NameContext";
 import { StatsProvider } from "./contexts/StatsContext";
 import OldChest from "./pages/elden-ring-world/OldChest";
@@ -36,8 +36,12 @@ const router = createBrowserRouter([
     element: <FirstChoicePage />,
   },
   {
-    path: "/boss-fight",
-    element: <CombatScreen />,
+    path: "/boss-fight-godefroy",
+    element: <CombatScreenGodefrey />,
+  },
+  {
+    path: "/boss-fight-radahn",
+    element: <CombatScreenRadahn />,
   },
   {
     path: "/loot-1",

@@ -1,0 +1,19 @@
+.class-select {
+  .class-button {
+    background-color: var(--main-color);
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    color: var(--white-color);
+    border-radius: 999px;
+    text-decoration: none;
+    margin: 2rem;
+  }
+
+  .class-button:hover {
+    background-color: var(--lighter-color);
+  }
+
+  h3 {
+    text-align: center;
+  }
+}

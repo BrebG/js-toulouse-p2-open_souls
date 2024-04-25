@@ -1,16 +1,17 @@
+import PropTypes from "prop-types";
 import "./ClassSelect.scss";
 import PropTypes from "prop-types";
 import CharStats from "./CharStats";
 
-function ClassSelect({ caste }) {
+function ClassSelect({ classe }) {
   return (
     <div className="class-select">
       <div>
         <div>
           <div className="char-select">
-            <img src={caste.image} alt={caste.name} className="class-image" />
+            <img src={classe.image} alt={classe.name} className="class-image" />
           </div>
-          <CharStats stats={caste.stats} />
+          <CharStats classe={classe} />
         </div>
       </div>
     </div>
@@ -18,7 +19,7 @@ function ClassSelect({ caste }) {
 }
 
 ClassSelect.propTypes = {
-  caste: PropTypes.shape({
+  classe: PropTypes.shape({
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     stats: PropTypes.shape({

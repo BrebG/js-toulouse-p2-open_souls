@@ -9,7 +9,8 @@ import ChoicePage from "./pages/ChoicePage";
 import LosingScreen from "./pages/LosingScreen";
 import WinningScreen from "./pages/WinningScreen";
 import CombatScreen from "./pages/CombatScreen";
-import { StatsProvider } from "./context/statscontext";
+import { NameProvider } from "./contexts/NameContext";
+import { StatsProvider } from "./contexts/StatsContext";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <StatsProvider>
-    <RouterProvider router={router} />
-  </StatsProvider>
+  <NameProvider>
+    <StatsProvider>
+      <RouterProvider router={router} />
+    </StatsProvider>
+  </NameProvider>
 );

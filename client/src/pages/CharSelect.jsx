@@ -2,15 +2,15 @@ import { useNavigate } from "react-router-dom";
 import "./CharSelect.scss";
 import { useEffect, useState } from "react";
 import ClassSelect from "../components/ClassSelect";
+import { useStats } from "../contexts/StatsContext";
 
 function CharSelect() {
-  const [classes, setClasses] = useState([]);
   const [classIndex, setClassIndex] = useState(0);
-  // const [selectedCharacter, setSelectedCharacter] = useState({});
-  const navigation = useNavigate();
+  const [classes, setClasses] = useState([]);
+  const { setChosenClass } = useStats();
 
   useEffect(() => {
-    fetch("https:eldenring.fanapis.com/api/classes")
+    fetch("https://eldenring.fanapis.com/api/classes")
       .then((response) => response.json())
       .then((data) => {
         setClasses(data.data || []);
@@ -29,36 +29,32 @@ function CharSelect() {
     }
   };
 
-  function handleClickSelectCharacter() {
-    // setSelectedCharacter(classes[classIndex]);
-    navigation("/choice-selection");
-  }
-
   return (
     <div className="character-select">
       <h2>Choose your class</h2>
-      <button type="button" onClick={pickPrevious} className="button-index">
-        &#10094;
-      </button>
-      <div>
+      <div className="char-select">
+        <button type="button" onClick={pickPrevious} className="button-index">
+          &#10094;
+        </button>
         {classes.map(
-          (el, i) => i === classIndex && <ClassSelect key={el.id} classe={el} />
+          (classe, i) =>
+            i === classIndex && <ClassSelect key={classe.id} classe={classe} />
         )}
+        <button type="button" onClick={pickNext} className="button-index">
+          &#10095;
+        </button>
       </div>
-      <button type="button" onClick={pickNext} className="button-index">
-        &#10095;
-      </button>
       <div className="inputs">
         <p className="text-input">Enter your name :</p>
         <input type="text" className="text-input" />
       </div>
-      <button
-        type="button"
+      <Link
+        to="/choice-selection"
         className="class-button"
-        onClick={handleClickSelectCharacter}
+        onClick={setChosenClass(classes[classIndex])}
       >
         START
-      </button>
+      </Link>
     </div>
   );
 }

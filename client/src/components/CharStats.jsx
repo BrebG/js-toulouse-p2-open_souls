@@ -1,25 +1,26 @@
-import "./CharStats.scss";
 import PropTypes from "prop-types";
+import "./CharStats.scss";
 
-function CharStats({ stats }) {
+function CharStats({ classe }) {
   return (
     <div className="character-stats">
       <ul>
-        <li>Level : {stats.level}</li>
-        <li>Vigor : {stats.vigor}</li>
-        <li>Strenght : {stats.strength}</li>
-        <li>Dexterity : {stats.dexterity}</li>
+        <li>Level : {classe.stats.level}</li>
+        <li>Vigor : {classe.stats.vigor}</li>
+        <li>Strenght : {classe.stats.strength}</li>
+        <li>Dexterity : {classe.stats.dexterity}</li>
       </ul>
     </div>
   );
 }
-
 CharStats.propTypes = {
-  stats: PropTypes.shape({
-    level: PropTypes.number.isRequired,
-    vigor: PropTypes.number.isRequired,
-    strength: PropTypes.number.isRequired,
-    dexterity: PropTypes.number.isRequired,
+  classe: PropTypes.shape({
+    stats: PropTypes.shape({
+      level: PropTypes.number.isRequired,
+      vigor: PropTypes.number.isRequired,
+      strength: PropTypes.number.isRequired,
+      dexterity: PropTypes.number.isRequired,
+    }).isRequired,
   }).isRequired,
 };
 

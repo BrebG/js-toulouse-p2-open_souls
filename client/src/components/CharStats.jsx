@@ -7,7 +7,7 @@ function CharStats({ classe }) {
       <ul>
         <li>Level : {classe.stats.level}</li>
         <li>Vigor : {classe.stats.vigor}</li>
-        <li>Strenght : {classe.stats.strength}</li>
+        <li>Strength : {classe.stats.strength}</li>
         <li>Dexterity : {classe.stats.dexterity}</li>
       </ul>
     </div>

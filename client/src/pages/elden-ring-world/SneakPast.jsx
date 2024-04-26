@@ -10,17 +10,17 @@ function SneakPast() {
   };
 
   return (
-    <div className="choice-page">
+    <div className={`choice-page ${loreIndex >= 19 ? "sneak-past" : ""}`}>
       <div className="story-text">
         <div className="lore-text">
           {loreIndex === 19 && (
-            <p>
+            <p className="paragraph">
               Nothing happens, you run to distance yourself from the corpse and
               fall to the ground. You lost 60HP.
             </p>
           )}
 
-          <p>{EldenTexts[loreIndex].content}</p>
+          <p className="paragraph">{EldenTexts[loreIndex].content}</p>
         </div>
 
         <div id="div-button-next">

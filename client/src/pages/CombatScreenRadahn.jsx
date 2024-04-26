@@ -27,7 +27,7 @@ function CombatScreenRadahn() {
     image: "./src/assets/images/confessor.png",
   };
 
-  const [ennemyHealth, setEnnemyHealth] = useState(150);
+  const [EnnemyHealth, setEnnemyHealth] = useState(150);
 
   const dealDamage = (damage) => {
     setEnnemyHealth((prevEnnemyHealth) =>
@@ -47,7 +47,7 @@ function CombatScreenRadahn() {
     <div className="CombatScreen">
       <div className="TopSection">
         <Ennemy
-          EnnemyHealth={ennemyHealth}
+          EnnemyHealth={EnnemyHealth}
           image={sampleEnnemy.image}
           EnnemyName={sampleEnnemy.name}
           description={sampleEnnemy.description}
@@ -63,7 +63,7 @@ function CombatScreenRadahn() {
       </div>
 
       <div className="BottomSection">
-        {ennemyHealth !== 0 ? (
+        {EnnemyHealth !== 0 ? (
           <Link to="/loosing-page" className="app-button">
             Defeat
           </Link>

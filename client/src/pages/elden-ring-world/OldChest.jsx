@@ -27,7 +27,7 @@ function OldChest() {
       <div>
         {loreIndex === 7 && (
           <div className="choice-button">
-            <Link to="/boss-fight">Next</Link>
+            <Link to="/boss-fight-godefroy">Next</Link>
           </div>
         )}
       </div>

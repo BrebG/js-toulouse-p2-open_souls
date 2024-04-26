@@ -6,6 +6,7 @@ import useItems from "../../../tools/useItems";
 function LootNagakiba() {
   const [isShown, setIsShown] = useState(false);
   const { weaponStuff } = useItems();
+
   return (
     <div className="loot-background">
       <div

@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 function Navbar({ items }) {
   return (
@@ -8,7 +8,7 @@ function Navbar({ items }) {
           (item) =>
             item.owned && (
               <li key={item.id}>
-                <a href={`#/item/${  item.id}`}>
+                <a href={`#/item/${item.id}`}>
                   <img src={item.imageUrl} alt={item.name} /> {item.name}
                 </a>
               </li>
@@ -25,9 +25,9 @@ Navbar.propTypes = {
       id: PropTypes.number.isRequired,
       imageUrl: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      owned: PropTypes.bool.isRequired
+      owned: PropTypes.bool.isRequired,
     })
-  ).isRequired
+  ).isRequired,
 };
 
 export default Navbar;

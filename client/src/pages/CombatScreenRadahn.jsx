@@ -4,7 +4,6 @@ import "./CombatScreen.scss";
 import Ennemy from "../components/Ennemy";
 import Player from "../components/Player";
 import CombatAction from "../components/CombatAction";
-import CombatLog from "../components/CombatLog";
 
 function CombatScreenRadahn() {
   const sampleEnnemy = {
@@ -65,7 +64,6 @@ function CombatScreenRadahn() {
       </div>
 
       <div className="BottomSection">
-        <CombatLog />
         {EnnemyHealth !== 0 ? (
           <Link to="/loosing-page" className="app-button">
             Defeat

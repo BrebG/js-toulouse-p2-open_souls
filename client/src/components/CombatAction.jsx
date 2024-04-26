@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "../pages/CombatScreen.scss";
 
 function CombatAction({ dealDamage, receiveDamage }) {
   return (

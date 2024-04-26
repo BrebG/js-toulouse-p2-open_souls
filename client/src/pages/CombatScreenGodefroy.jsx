@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import Ennemy from "../components/Ennemy";
 import Player from "../components/Player";
 import CombatAction from "../components/CombatAction";
-import CombatLog from "../components/CombatLog";
 
-function CombatScreenGodefrey() {
+function CombatScreenGodefroy() {
   const sampleEnnemy = {
     id: "17f69a82a2el0i1uta5rxvqv53g7e",
     name: "Godfrey, First Elden Lord (hoarah Loux)",
@@ -64,7 +63,6 @@ function CombatScreenGodefrey() {
       </div>
 
       <div className="BottomSection">
-        <CombatLog />
         {EnnemyHealth !== 0 ? (
           <Link to="/loosing-page" className="app-button">
             Defeat
@@ -81,4 +79,4 @@ function CombatScreenGodefrey() {
   );
 }
 
-export default CombatScreenGodefrey;
+export default CombatScreenGodefroy;

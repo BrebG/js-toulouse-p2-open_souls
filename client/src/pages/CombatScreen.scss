@@ -133,13 +133,9 @@
 
   .bottomSection {
     display: flex;
-
-    .CombatLog {
-      color: #910000;
-    }
   }
 }
-.Ennemy img {
+.CombatAction {
   animation: horizontal-shaking 0.5s infinite;
 }
 

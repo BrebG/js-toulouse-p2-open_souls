@@ -1,26 +1,25 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./CombatScreen.scss";
 import Ennemy from "../components/Ennemy";
 import Player from "../components/Player";
 import CombatAction from "../components/CombatAction";
 import CombatLog from "../components/CombatLog";
 
-function CombatScreen() {
+function CombatScreenGodefrey() {
   const sampleEnnemy = {
-    id: "17f69dc74fdl0i1v1wz3qrzn19aps8",
-    name: "Starscourge Radahn",
-    image: "./src/assets/images/radahn.png",
-    region: "Caelid",
+    id: "17f69a82a2el0i1uta5rxvqv53g7e",
+    name: "Godfrey, First Elden Lord (hoarah Loux)",
+    image: "./src/assets/images/ggodefry-boss.png",
+    region: "Altus Plateau",
     description:
-      "General Radahn is cursed ever to wander. Eaten from the inside, by Malenia's scarlet rot, his Wits are long gone. Now he gathers the corpses of former friends and foes alike, gorging on them, like a dog.",
-    location: "Caelid",
+      "I've given thee courtesy enough. Now I fight as Hoarah Loux. Warrior!",
+    location: "Leyndell, Capital of Ash",
     drops: {
-      0: "70,000 Runes",
-      1: "Remembrance of the Starscourge, Radahn's Great Rune",
+      0: "300,000  Runes",
+      1: "Remembrance of Hoarah Loux",
     },
-    healthPoints: "≈25,856",
-    background: "./src/assets/images/radahnBg.jpg",
+    healthPoints: "≈2200",
+    background: "./src/assets/images/elden-text-arena-id-7-8-9.jpg",
   };
 
   const samplePlayer = {
@@ -82,4 +81,4 @@ function CombatScreen() {
   );
 }
 
-export default CombatScreen;
+export default CombatScreenGodefrey;

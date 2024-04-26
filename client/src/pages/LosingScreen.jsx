@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./LosingScreen.scss";
+import "./losingscreen.scss";
 
 function LosingScreen() {
   const soundPath = "./src/assets/sound/sword-button.wav";

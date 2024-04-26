@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LootSword.scss";
 import useItems from "../../../tools/useItems";
+import "../../../components/HoverItem.scss";
 
 function LootSword() {
   const [isShown, setIsShown] = useState(false);
@@ -18,7 +19,7 @@ function LootSword() {
         <h1>Loots</h1>
         <section className="loot-choice">
           <div className="left-loot">
-            <Link to="/boss-fight" className="choice-loot">
+            <Link to="/boss-fight-godefroy" className="choice-loot">
               <p>{weaponStuff[1]?.name}</p>
             </Link>
             {/* rajouter le onClick */}

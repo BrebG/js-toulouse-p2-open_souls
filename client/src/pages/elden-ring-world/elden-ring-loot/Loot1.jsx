@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Loot1.scss";
 import useItems from "../../../tools/useItems";
+import "../../../components/HoverItem.scss";
 
 function Loot1() {
   const [isShownLeft, setIsShownLeft] = useState(false);

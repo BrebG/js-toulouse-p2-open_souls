@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LootReduvia.scss";
 import useItems from "../../../tools/useItems";
+import "../../../components/HoverItem.scss";
 
 function LootReduvia() {
   const [isShown, setIsShown] = useState(false);
   const { weaponStuff } = useItems();
-
   return (
     <div className="loot-background">
       <div

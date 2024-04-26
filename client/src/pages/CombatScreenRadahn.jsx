@@ -82,6 +82,16 @@ function CombatScreenRadahn() {
       </div>
 
       <div className="BottomSection">
+        {EnnemyHealth !== 0 ? (
+          <Link to="/loosing-page" className="app-button">
+            Defeat
+          </Link>
+        ) : (
+          <Link to="/winning-page" className="app-button">
+            Victory
+          </Link>
+        )}
+
         <CombatAction dealDamage={dealDamage} receiveDamage={receiveDamage} />
       </div>
     </div>

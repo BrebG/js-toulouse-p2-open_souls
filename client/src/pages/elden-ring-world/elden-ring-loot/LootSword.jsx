@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LootSword.scss";
 import useItems from "../../../tools/useItems";
+import "../../../components/HoverItem.scss";
 
 function LootSword() {
   const [isShown, setIsShown] = useState(false);

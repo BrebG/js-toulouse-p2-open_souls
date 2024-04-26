@@ -1,0 +1,43 @@
+.end-screen {
+  background-image: url("../../assets/images/loot-background.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  bottom: 10rem;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: var(--white-color);
+    padding: 1rem;
+    text-align: center;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+  }
+
+  .demo-text {
+    background-color: rgba(26, 35, 37, 0.7);
+    max-width: 40rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .end-screen-button {
+    background-color: var(--main-color);
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    color: var(--white-color);
+    border-radius: 999px;
+    text-decoration: none;
+    margin: 3rem;
+    box-shadow: 0px 2px 10px var(--darker-color);
+  }
+
+  .end-screen-button:hover {
+    background-color: var(--lighter-color);
+  }
+}

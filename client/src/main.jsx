@@ -21,6 +21,7 @@ import Loot1 from "./pages/elden-ring-world/elden-ring-loot/Loot1";
 import LootReduvia from "./pages/elden-ring-world/elden-ring-loot/LootReduvia";
 import LootNagakiba from "./pages/elden-ring-world/elden-ring-loot/LootNagakiba";
 import LootSword from "./pages/elden-ring-world/elden-ring-loot/LootSword";
+import EndScreen from "./pages/elden-ring-world/EndScreen";
 
 const router = createBrowserRouter([
   {
@@ -94,6 +95,10 @@ const router = createBrowserRouter([
   {
     path: "/sneak-past",
     element: <SneakPast />,
+  },
+  {
+    path: "/end-screen",
+    element: <EndScreen />,
   },
 ]);
 

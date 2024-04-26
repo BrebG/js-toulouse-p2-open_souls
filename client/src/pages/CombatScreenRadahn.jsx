@@ -42,7 +42,7 @@ function CombatScreenRadahn() {
   };
   useEffect(() => {
     if (ennemyHealth === 0) {
-      navigate("/loot-1");
+      navigate("/winning-page");
     }
   }, [ennemyHealth, navigate]);
 

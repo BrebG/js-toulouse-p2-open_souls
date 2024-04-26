@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // import { useItem } from "../contexts/ItemContext";  import du context
 
-function ItemArray() {
+function useItems() {
   const [weaponStuff, setWeaponStuff] = useState(0);
   const [shieldStuff, setShieldStuff] = useState(0);
 
@@ -43,8 +43,8 @@ function ItemArray() {
           )
         )
       );
-
       setWeaponStuff(weaponLoot.map((el) => el.data));
+
       const shieldLoot = await Promise.all(
         defenseStuff.map(async (item) =>
           fetch(`https://eldenring.fanapis.com/api/shields/${item.id}`).then(
@@ -52,7 +52,6 @@ function ItemArray() {
           )
         )
       );
-
       setShieldStuff(shieldLoot.map((el) => el.data));
     } catch (error) {
       console.error(error);
@@ -61,14 +60,12 @@ function ItemArray() {
 
   useEffect(() => {
     getGear();
-  }, []);
+  }, [weaponStuff, shieldStuff]);
 
-  return (
-    <div>
-      {setWeaponStuff && <p>{weaponStuff[0]?.name}</p>}
-      {setShieldStuff && <p>{shieldStuff[0]?.name}</p>}
-    </div>
-  );
+  return {
+    weaponStuff,
+    shieldStuff,
+  };
 }
 
-export default ItemArray;
+export default useItems;

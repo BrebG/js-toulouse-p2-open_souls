@@ -10,10 +10,10 @@ function OldChest() {
     setLoreIndex(loreIndex + 2);
   };
   return (
-    <div className="choice-page">
+    <div className={`small-old-chests ${loreIndex >= 6 ? "small-chest" : ""}`}>
       <div className="story-text">
         <div className="lore-text">
-          <p>{EldenTexts[loreIndex].content}</p>
+          <p className="paragraph">{EldenTexts[loreIndex].content}</p>
           {loreIndex === 7 && <p>{EldenTexts[8].content}</p>}
         </div>
         <div id="div-button-next">

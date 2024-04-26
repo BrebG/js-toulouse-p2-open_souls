@@ -9,10 +9,10 @@ function MimicChoice() {
     setLoreIndex(loreIndex + 1);
   };
   return (
-    <div className="choice-page">
+    <div className={`choice-page ${loreIndex >= 10 ? "mimic-choice" : ""}`}>
       <div className="story-text">
         <div className="lore-text">
-          <p>{EldenTexts[loreIndex].content}</p>
+          <p className="paragraph">{EldenTexts[loreIndex].content}</p>
         </div>
         <div id="div-button-next">
           {loreIndex < 11 && (

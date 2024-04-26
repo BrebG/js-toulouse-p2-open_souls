@@ -7,7 +7,7 @@ import FirstChoicePage from "./pages/elden-ring-world/FirstChoicePage";
 import LosingScreen from "./pages/LosingScreen";
 import WinningScreen from "./pages/WinningScreen";
 import CombatScreenRadahn from "./pages/CombatScreenRadahn";
-import CombatScreenGodefrey from "./pages/CombatScreenGodefroy";
+import CombatScreenGodefrey from "./pages/CombatScreenGodefrey";
 import { NameProvider } from "./contexts/NameContext";
 import { StatsProvider } from "./contexts/StatsContext";
 import OldChest from "./pages/elden-ring-world/OldChest";
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
     element: <CombatScreenRadahn />,
   },
   {
-    path: "/loot-1",
+    path: "/loot-godefrey",
     element: <Loot1 />,
   },
   {

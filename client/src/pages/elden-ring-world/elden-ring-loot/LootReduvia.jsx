@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LootReduvia.scss";
 import useItems from "../../../tools/useItems";
+import "../../../components/HoverItem.scss";
 
 function LootReduvia() {
   const [isShown, setIsShown] = useState(false);
   const { weaponStuff } = useItems();
-
   return (
     <div className="loot-background">
       <div
@@ -18,7 +18,7 @@ function LootReduvia() {
         <h1>Loots</h1>
         <section className="loot-choice">
           <div className="left-loot">
-            <Link to="/boss-fight" className="choice-loot">
+            <Link to="/boss-fight-radahn" className="choice-loot">
               <p>{weaponStuff[2]?.name}</p>
             </Link>
             {/* rajouter le onClick */}

@@ -2,12 +2,12 @@ import PropTypes from "prop-types";
 import "../pages/CombatScreen.scss";
 import PlayerLifebar from "./PlayerLifebar";
 
-function Player({ image, PlayerName, PlayerHealth }) {
+function Player({ image, playerName, playerHealth }) {
   return (
     <div className="Player">
-      <img src={image} alt={PlayerName} />
+      <img src={image} alt={playerName} />
       <div>
-        <PlayerLifebar PlayerHealth={PlayerHealth} />
+        <PlayerLifebar playerHealth={playerHealth} playerName={playerName} />
       </div>
     </div>
   );
@@ -15,8 +15,8 @@ function Player({ image, PlayerName, PlayerHealth }) {
 
 Player.propTypes = {
   image: PropTypes.string.isRequired,
-  PlayerName: PropTypes.string.isRequired,
-  PlayerHealth: PropTypes.number.isRequired,
+  playerName: PropTypes.string.isRequired,
+  playerHealth: PropTypes.number.isRequired,
 };
 
 export default Player;

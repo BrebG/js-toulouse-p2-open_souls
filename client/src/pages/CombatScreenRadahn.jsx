@@ -82,7 +82,7 @@ function CombatScreenRadahn() {
       </div>
 
       <div className="BottomSection">
-        {EnnemyHealth !== 0 ? (
+        {ennemyHealth !== 0 ? (
           <Link to="/loosing-page" className="app-button">
             Defeat
           </Link>

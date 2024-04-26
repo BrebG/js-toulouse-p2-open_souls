@@ -19,6 +19,10 @@ function useItems() {
       id: "17f69d42419l0i1oujp0m1csaaqdanf",
       name: "Reduvia",
     },
+    {
+      id: "17f694ec20bl0i1p34h48fycewmkr1",
+      name: "Lion Greatbow",
+    },
   ];
 
   const defenseStuff = [
@@ -60,7 +64,7 @@ function useItems() {
 
   useEffect(() => {
     getGear();
-  }, [weaponStuff, shieldStuff]);
+  }, []);
 
   return {
     weaponStuff,

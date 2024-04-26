@@ -10,10 +10,12 @@ function Reduvia() {
   };
 
   return (
-    <div className="choice-page">
+    <div
+      className={`choice-page reduvia ${loreIndex >= 19 ? "sneak-past" : ""}`}
+    >
       <div className="story-text">
         <div className="lore-text">
-          <p>{EldenTexts[loreIndex].content}</p>
+          <p className="paragraph">{EldenTexts[loreIndex].content}</p>
         </div>
 
         <div id="div-button-next">

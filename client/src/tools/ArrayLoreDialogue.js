@@ -7,7 +7,7 @@ export const EldenTexts = [
   {
     id: 2,
     content:
-      "Hello fallen soul, the happy life you once knew is no more. If you wish to reclaim it, you must accomplish several tasks for me",
+      "Hello fallen soul, the happy life you once knew is no more. If you wish to reclaim it, you must accomplish several tasks for me.",
   }, // Le deuxième ID est la voix, si possible mettre un CSS en italique pour la compréhension du joueur
   {
     id: 3,
@@ -27,12 +27,12 @@ export const EldenTexts = [
   {
     id: 6,
     content:
-      "Old chest: You find an immense katana, the voice tells you that it's the Nagakiba, a powerful blade that will be of great use to you.",
+      "You find an immense katana, the voice tells you that it's the Nagakiba, a powerful blade that will be of great use to you.",
   },
   {
     id: 65,
     content:
-      "Small chest: You find a worn straight sword, the voice tells you that this sword isn't very powerful but it's better than nothing.",
+      "You find a worn straight sword, the voice tells you that this sword isn't very powerful but it's better than nothing.",
     // Les sixième ID représente les deux premiers loots et leur contenant
   },
   {
@@ -62,8 +62,7 @@ export const EldenTexts = [
   },
   {
     id: 12,
-    content:
-      "It was a Mimic but he was stronger than you. He took the upper hand on you.",
+    content: "It was a Mimic but he was stronger than you...",
     // Si, on ouvre le coffre, alors, perte de ___% d'hp | faible % de chance d'être tué avec un lancé de dés.
   },
   {
@@ -89,7 +88,7 @@ export const EldenTexts = [
   },
   {
     id: 17,
-    content: "Take the dagger",
+    content: "Approach the body",
     // Vous obtenez la dague "Reduvia", une dague puissante
   },
   {

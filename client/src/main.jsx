@@ -44,7 +44,7 @@ const router = createBrowserRouter([
     element: <CombatScreenRadahn />,
   },
   {
-    path: "/loot-1",
+    path: "/loot-godefrey",
     element: <Loot1 />,
   },
   {

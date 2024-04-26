@@ -26,7 +26,7 @@ function Reduvia() {
       </div>
       {loreIndex === 20 && (
         <div className="choice-button">
-          <Link to="/boss-fight">Next</Link>
+          <Link to="/boss-fight-radahn">Next</Link>
         </div>
       )}
     </div>

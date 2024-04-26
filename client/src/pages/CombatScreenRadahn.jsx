@@ -70,7 +70,7 @@ function CombatScreenRadahn() {
             Defeat
           </Link>
         ) : (
-          <Link to="/loot-1" className="app-button">
+          <Link to="/winning-page" className="app-button">
             Victory
           </Link>
         )}

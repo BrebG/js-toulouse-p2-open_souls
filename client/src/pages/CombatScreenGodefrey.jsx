@@ -33,7 +33,7 @@ function CombatScreenGodefrey() {
     image: chosenClass.image,
   };
 
-  const [EnnemyHealth, setEnnemyHealth] = useState(150);
+  const [ennemyHealth, setEnnemyHealth] = useState(150);
 
   const dealDamage = (damage) => {
     setEnnemyHealth((prevEnnemyHealth) =>
@@ -41,12 +41,12 @@ function CombatScreenGodefrey() {
     );
   };
   useEffect(() => {
-    if (EnnemyHealth === 0) {
+    if (ennemyHealth === 0) {
       navigate("/loot-1");
     }
-  }, [EnnemyHealth, navigate]);
+  }, [ennemyHealth, navigate]);
 
-  const [PlayerHealth, setPlayerHealth] = useState(100);
+  const [playerHealth, setPlayerHealth] = useState(100);
   const receiveDamage = (damage) => {
     setTimeout(() => {
       setPlayerHealth((prevPlayerHealth) =>
@@ -55,25 +55,25 @@ function CombatScreenGodefrey() {
     }, 800);
   };
   useEffect(() => {
-    if (PlayerHealth === 0) {
+    if (playerHealth === 0) {
       navigate("/loosing-page");
     }
-  }, [PlayerHealth, navigate]);
+  }, [playerHealth, navigate]);
 
   return (
     <div className="CombatScreen">
       <div className="TopSection">
         <Ennemy
-          EnnemyHealth={EnnemyHealth}
+          ennemyHealth={ennemyHealth}
           image={sampleEnnemy.image}
-          EnnemyName={sampleEnnemy.name}
+          ennemyName={sampleEnnemy.name}
           description={sampleEnnemy.description}
         />
 
         <Player
-          PlayerHealth={PlayerHealth}
+          playerHealth={playerHealth}
           image={samplePlayer.image}
-          PlayerName={samplePlayer.name}
+          playerName={samplePlayer.name}
           description={samplePlayer.description}
           receiveDamage={receiveDamage}
         />

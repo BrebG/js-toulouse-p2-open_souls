@@ -12,7 +12,7 @@ function CombatAction({ dealDamage, receiveDamage }) {
       () => {
         setButtonDisabled(false);
       },
-      1000 - chosenClass.stats.dexterity * 100
+      1000 - Number(chosenClass.stats.dexterity) * 100
     );
   };
   const disableButtonHeavy = () => {
@@ -21,7 +21,7 @@ function CombatAction({ dealDamage, receiveDamage }) {
       () => {
         setButtonDisabled(false);
       },
-      2000 - chosenClass.stats.dexterity * 100
+      2000 - Number(chosenClass.stats.dexterity) * 100
     );
   };
 

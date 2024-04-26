@@ -1,15 +1,20 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Ennemy from "../components/Ennemy";
 import Player from "../components/Player";
 import CombatAction from "../components/CombatAction";
-import CombatLog from "../components/CombatLog";
+import { useStats } from "../contexts/StatsContext";
+import { useName } from "../contexts/NameContext";
 
 function CombatScreenGodefrey() {
+  const { name } = useName();
+  const { chosenClass } = useStats();
+  const navigate = useNavigate();
+
   const sampleEnnemy = {
     id: "17f69a82a2el0i1uta5rxvqv53g7e",
     name: "Godfrey, First Elden Lord (hoarah Loux)",
-    image: "./src/assets/images/ggodefry-boss.png",
+    image: "./src/assets/images/godefrey.png",
     region: "Altus Plateau",
     description:
       "I've given thee courtesy enough. Now I fight as Hoarah Loux. Warrior!",
@@ -24,8 +29,8 @@ function CombatScreenGodefrey() {
 
   const samplePlayer = {
     id: "player_name",
-    name: "Player_Name",
-    image: "./src/assets/images/confessor.png",
+    name,
+    image: chosenClass.image,
   };
 
   const [EnnemyHealth, setEnnemyHealth] = useState(150);
@@ -35,6 +40,12 @@ function CombatScreenGodefrey() {
       Math.max(prevEnnemyHealth - damage, 0)
     );
   };
+  useEffect(() => {
+    if (EnnemyHealth === 0) {
+      navigate("/loot-1");
+    }
+  }, [EnnemyHealth, navigate]);
+
   const [PlayerHealth, setPlayerHealth] = useState(100);
   const receiveDamage = (damage) => {
     setTimeout(() => {
@@ -43,6 +54,11 @@ function CombatScreenGodefrey() {
       );
     }, 800);
   };
+  useEffect(() => {
+    if (PlayerHealth === 0) {
+      navigate("/loosing-page");
+    }
+  }, [PlayerHealth, navigate]);
 
   return (
     <div className="CombatScreen">
@@ -57,24 +73,13 @@ function CombatScreenGodefrey() {
         <Player
           PlayerHealth={PlayerHealth}
           image={samplePlayer.image}
-          EnnemyName={samplePlayer.name}
+          PlayerName={samplePlayer.name}
           description={samplePlayer.description}
           receiveDamage={receiveDamage}
         />
       </div>
 
       <div className="BottomSection">
-        <CombatLog />
-        {EnnemyHealth !== 0 ? (
-          <Link to="/loosing-page" className="app-button">
-            Defeat
-          </Link>
-        ) : (
-          <Link to="/item-loot" className="app-button">
-            Victory
-          </Link>
-        )}
-
         <CombatAction dealDamage={dealDamage} receiveDamage={receiveDamage} />
       </div>
     </div>

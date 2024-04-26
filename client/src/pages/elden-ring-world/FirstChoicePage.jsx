@@ -14,7 +14,7 @@ function FirstChoicePage() {
     <div className={`choice-page ${loreIndex === 3 ? "new-class" : ""}`}>
       <div className="story-text">
         <div className="lore-text">
-          <p>{EldenTexts[loreIndex].content}</p>
+          <p className="paragraph">{EldenTexts[loreIndex].content}</p>
         </div>
         <div id="div-button-next">
           {loreIndex < 4 && (

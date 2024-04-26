@@ -88,7 +88,7 @@ export const EldenTexts = [
   },
   {
     id: 17,
-    content: "Take the dagger",
+    content: "Approach the body",
     // Vous obtenez la dague "Reduvia", une dague puissante
   },
   {

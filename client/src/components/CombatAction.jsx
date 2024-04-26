@@ -26,6 +26,7 @@ function CombatAction({ dealDamage, receiveDamage }) {
   );
 }
 
+
 CombatAction.propTypes = {
   dealDamage: PropTypes.func.isRequired,
   receiveDamage: PropTypes.func.isRequired,

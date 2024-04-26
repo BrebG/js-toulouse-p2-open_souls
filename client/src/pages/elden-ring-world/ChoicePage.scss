@@ -3,8 +3,8 @@
   box-sizing: border-box;
 }
 .choice-page {
+  background-image: url("../../assets/images/elden-text-content-id-1-2-3.jpg");
   height: 100vh;
-  background-image: url("../../assets/images/adventure-pannel-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -12,39 +12,39 @@
   flex-direction: column;
   justify-content: space-between;
   bottom: 10rem;
+}
 
-  .story-text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: var(--white-color);
-    background-color: rgba(26, 35, 37, 0.7);
-    padding: 10px;
-    margin-top: 30dvh;
-    min-height: 200px;
-  }
+.story-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--white-color);
+  background-color: rgba(26, 35, 37, 0.7);
+  padding: 10px;
+  margin-top: 30dvh;
+  min-height: 200px;
+}
 
-  #next-lore-button {
-    color: var(--white-color);
-    display: flex;
-    justify-content: center;
-    width: 2rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-  }
+#next-lore-button {
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  width: 2rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
 
-  #div-button-next {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    height: 2rem;
-  }
+#div-button-next {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 2rem;
+}
 
-  p {
-    padding-top: 2rem;
-  }
+.paragraph {
+  padding-top: 2rem;
 }
 
 @media (min-width: 1024px) {
@@ -91,4 +91,28 @@
 h3 {
   color: var(--white-color);
   text-align: center;
+}
+
+.small-old-chests {
+  background-image: url("../../assets/images/elden-text-content-id-4-5-6.jpg");
+}
+
+.small-chest {
+  background-image: url("../../assets/images/elden-text-arena-id-7-8-9.jpg");
+}
+
+.mimic-choice {
+  background-image: url("../../assets/images/elden-text-content-id-10-11.jpg");
+}
+
+.last-choice {
+  background-image: url("../../assets/images/elden-text-content-id-14-15-16-17.jpg");
+}
+
+.sneak-past {
+  background-image: url("../../assets/images/enlden-text-content-id-19.jpg") !important;
+}
+
+.reduvia {
+  background-image: url("../../assets/images/elden-text-content-id-14-15-16-17.jpg");
 }

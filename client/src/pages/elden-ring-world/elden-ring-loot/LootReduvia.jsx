@@ -18,7 +18,7 @@ function LootReduvia() {
         <h1>Loots</h1>
         <section className="loot-choice">
           <div className="left-loot">
-            <Link to="/boss-fight" className="choice-loot">
+            <Link to="/boss-fight-radahn" className="choice-loot">
               <p>{weaponStuff[2]?.name}</p>
             </Link>
             {/* rajouter le onClick */}

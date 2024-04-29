@@ -17,10 +17,11 @@ import OpenChest from "./pages/elden-ring-world/OpenChest";
 import LastChoice from "./pages/elden-ring-world/LastChoice";
 import Reduvia from "./pages/elden-ring-world/Reduvia";
 import SneakPast from "./pages/elden-ring-world/SneakPast";
-import Loot1 from "./pages/elden-ring-world/elden-ring-loot/Loot1";
 import LootReduvia from "./pages/elden-ring-world/elden-ring-loot/LootReduvia";
 import LootNagakiba from "./pages/elden-ring-world/elden-ring-loot/LootNagakiba";
 import LootSword from "./pages/elden-ring-world/elden-ring-loot/LootSword";
+import LootGodefrey from "./pages/elden-ring-world/elden-ring-loot/LootGodefrey";
+import LootRadahn from "./pages/elden-ring-world/elden-ring-loot/LootRadahn";
 import EndScreen from "./pages/elden-ring-world/EndScreen";
 import { ItemProvider } from "./contexts/ItemContext";
 import { PlayerProvider } from "./contexts/PlayerContext";
@@ -60,7 +61,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/loot-godefrey",
-    element: <Loot1 />,
+    element: <LootGodefrey />,
   },
   {
     path: "/loosing-page",
@@ -117,6 +118,10 @@ const router = createBrowserRouter([
   {
     path: "/end-screen",
     element: <EndScreen />,
+  },
+  {
+    path: "/loot-radahn",
+    element: <LootRadahn />,
   },
 ]);
 

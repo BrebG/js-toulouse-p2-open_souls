@@ -16,7 +16,9 @@ function SneakPast() {
           {loreIndex === 19 && (
             <p className="paragraph">
               Nothing happens, you run to distance yourself from the corpse and
-              fall to the ground. You are thirsty and bruised... You lost yourself in the desert, starting to hallucinate. You meet your end.
+              fall to the ground. You are thirsty and bruised... You lost
+              yourself in the desert, starting to hallucinate. You meet your
+              end.
             </p>
           )}
 

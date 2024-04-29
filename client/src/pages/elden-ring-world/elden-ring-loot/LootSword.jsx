@@ -10,12 +10,11 @@ function LootSword() {
   const { setEquippedItems } = useItem();
 
   const equipWeapon = (weapon) => {
-    setEquippedItems(prev => ({
+    setEquippedItems((prev) => ({
       ...prev,
-      weapon
+      weapon,
     }));
-  }
-
+  };
 
   return (
     <div className="loot-background">
@@ -28,7 +27,11 @@ function LootSword() {
         <h1>Loots</h1>
         <section className="loot-choice">
           <div className="left-loot">
-            <Link to="/boss-fight-godefroy" className="choice-loot" onClick={() => equipWeapon(weaponStuff[1])}>
+            <Link
+              to="/boss-fight-godefroy"
+              className="choice-loot"
+              onClick={() => equipWeapon(weaponStuff[1])}
+            >
               <p>{weaponStuff[1]?.name}</p>
             </Link>
             <div

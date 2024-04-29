@@ -42,13 +42,13 @@ function CombatScreenGodefrey() {
       Math.max(prevPlayerHealth - damage, 0)
     );
   };
-  const shieldDefence = equippedItems.shield.defence?.[0].amount
+  const shieldDefence = equippedItems.shield.defence?.[0].amount;
 
   const [damageInterval, setDamageInterval] = useState(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      receiveDamage(20 - Math.floor((shieldDefence / 10 || 0)));
+      receiveDamage(20 - Math.floor(shieldDefence / 10 || 0));
     }, 2500);
     setDamageInterval(interval);
 
@@ -58,8 +58,7 @@ function CombatScreenGodefrey() {
   const cancelDamage = () => {
     clearInterval(damageInterval);
     setDamageInterval(null);
-  }
-
+  };
 
   const [ennemyHealth, setEnnemyHealth] = useState(Math.floor(150));
 
@@ -82,7 +81,7 @@ function CombatScreenGodefrey() {
   }, [playerHealth, navigate]);
 
   return (
-    <div className="CombatScreen">
+    <div className="CombatScreenGodefrey">
       <div className="TopSection">
         <Ennemy
           ennemyHealth={ennemyHealth}

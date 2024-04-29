@@ -7,10 +7,13 @@ export function ItemProvider({ children }) {
   const [item, setItem] = useState("");
   const [equippedItems, setEquippedItems] = useState({
     weapon: {},
-    shield: {}
+    shield: {},
   });
 
-  const itemValue = useMemo(() => ({ item, setItem, equippedItems, setEquippedItems }), [item, equippedItems]);
+  const itemValue = useMemo(
+    () => ({ item, setItem, equippedItems, setEquippedItems }),
+    [item, equippedItems]
+  );
 
   return (
     <ItemContext.Provider value={itemValue}>{children}</ItemContext.Provider>

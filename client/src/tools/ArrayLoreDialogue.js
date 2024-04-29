@@ -68,7 +68,7 @@ export const EldenTexts = [
   {
     id: 13,
     content: "Pass by.",
-    // Si on passe le chemin, alors, le joueur ne pert pas d'hp
+    // Si on passe le chemin, alors, le joueur ne perd pas d'hp
   },
   {
     id: 14,
@@ -134,7 +134,7 @@ export const EldenTexts = [
     content:
       "You regain consciousness, discovering that you are in a village halfway destroyed and deserted. In front of you, an old forge stands, very dark. You can't quite make out what might be inside.",
   },
-  // C'est votre arriver dans la première zone de MHW
+  // C'est votre arrivée dans la première zone de MHW
 ];
 // MONDE DE MONSTER HUNTER WORLD
 export const MHWTexts = [
@@ -153,7 +153,7 @@ export const MHWTexts = [
   {
     id: 3,
     content: "Scamper away quickly.",
-    // Jet de dés = Petite chance de tomber et de briser votre bouclier (De le faire tomber dans un lieu inaccessible serais plus logique) | Rien ne se passe
+    // Jet de dés = Petite chance de tomber et de briser votre bouclier (De le faire tomber dans un lieu inaccessible serait plus logique) | Rien ne se passe
   },
   {
     id: 4,

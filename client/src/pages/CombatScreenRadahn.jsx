@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Ennemy from "../components/Ennemy";
 import Player from "../components/Player";
 import CombatAction from "../components/CombatAction";
 import { useStats } from "../contexts/StatsContext";
 import { useName } from "../contexts/NameContext";
+import { usePlayerHealth } from "../contexts/PlayerContext";
+import { useItem } from "../contexts/ItemContext";
 
 function CombatScreenRadahn() {
   const { name } = useName();
   const { chosenClass } = useStats();
+  const { playerHealth, setPlayerHealth } = usePlayerHealth();
+  const { equippedItems } = useItem();
   const navigate = useNavigate();
 
   const sampleEnnemy = {
@@ -33,7 +37,30 @@ function CombatScreenRadahn() {
     image: chosenClass.image,
   };
 
-  const [ennemyHealth, setEnnemyHealth] = useState(150);
+  const receiveDamage = (damage) => {
+    setPlayerHealth((prevPlayerHealth) =>
+      Math.max(prevPlayerHealth - damage, 0)
+    );
+  };
+
+  const [damageInterval, setDamageInterval] = useState(null);
+
+  useEffect(() => {
+    const shieldDefence = equippedItems.shield.defence?.[0].amount;
+    const interval = setInterval(() => {
+      receiveDamage(30 - Math.floor(shieldDefence / 10 || 0));
+    }, 2000);
+    setDamageInterval(interval);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const cancelDamage = () => {
+    clearInterval(damageInterval);
+    setDamageInterval(null);
+  };
+
+  const [ennemyHealth, setEnnemyHealth] = useState(Math.floor(150));
 
   const dealDamage = (damage) => {
     setEnnemyHealth((prevEnnemyHealth) =>
@@ -42,19 +69,10 @@ function CombatScreenRadahn() {
   };
   useEffect(() => {
     if (ennemyHealth === 0) {
+      cancelDamage();
       navigate("/winning-page");
     }
   }, [ennemyHealth, navigate]);
-
-  const [playerHealth, setPlayerHealth] = useState(100);
-
-  const receiveDamage = (damage) => {
-    setTimeout(() => {
-      setPlayerHealth((prevPlayerHealth) =>
-        Math.max(prevPlayerHealth - damage, 0)
-      );
-    }, 800);
-  };
 
   useEffect(() => {
     if (playerHealth === 0) {
@@ -73,7 +91,6 @@ function CombatScreenRadahn() {
         />
 
         <Player
-          playerHealth={playerHealth}
           image={samplePlayer.image}
           ennemyName={samplePlayer.name}
           description={samplePlayer.description}
@@ -82,17 +99,7 @@ function CombatScreenRadahn() {
       </div>
 
       <div className="BottomSection">
-        {ennemyHealth !== 0 ? (
-          <Link to="/loosing-page" className="app-button">
-            Defeat
-          </Link>
-        ) : (
-          <Link to="/winning-page" className="app-button">
-            Victory
-          </Link>
-        )}
-
-        <CombatAction dealDamage={dealDamage} receiveDamage={receiveDamage} />
+        <CombatAction dealDamage={dealDamage} />
       </div>
     </div>
   );

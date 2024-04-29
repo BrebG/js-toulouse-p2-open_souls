@@ -23,6 +23,10 @@ function useItems() {
       id: "17f694ec20bl0i1p34h48fycewmkr1",
       name: "Lion Greatbow",
     },
+    {
+      id: "17f69d917e2l0i1omllp8sfqfor6g",
+      name: "Starscourge Greatsword",
+    },
   ];
 
   const defenseStuff = [

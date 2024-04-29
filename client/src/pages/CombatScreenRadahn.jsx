@@ -42,11 +42,11 @@ function CombatScreenRadahn() {
       Math.max(prevPlayerHealth - damage, 0)
     );
   };
-  const shieldDefence = equippedItems.shield.defence?.[0].amount
 
   const [damageInterval, setDamageInterval] = useState(null);
 
   useEffect(() => {
+    const shieldDefence = equippedItems.shield.defence?.[0].amount
     const interval = setInterval(() => {
       receiveDamage(30 - Math.floor((shieldDefence / 10 || 0)));
     }, 2000);

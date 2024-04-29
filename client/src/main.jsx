@@ -35,24 +35,27 @@ const router = createBrowserRouter([
   },
   {
     path: "/choice-selection",
-    element:
+    element: (
       <PlayerProvider>
         <FirstChoicePage />
-      </PlayerProvider>,
+      </PlayerProvider>
+    ),
   },
   {
     path: "/boss-fight-godefroy",
-    element: <PlayerProvider>
-      <CombatScreenGodefrey />
-    </PlayerProvider>
-    ,
+    element: (
+      <PlayerProvider>
+        <CombatScreenGodefrey />
+      </PlayerProvider>
+    ),
   },
   {
     path: "/boss-fight-radahn",
-    element: <PlayerProvider>
-      <CombatScreenRadahn />
-    </PlayerProvider>
-    ,
+    element: (
+      <PlayerProvider>
+        <CombatScreenRadahn />
+      </PlayerProvider>
+    ),
   },
   {
     path: "/loot-godefrey",
@@ -60,10 +63,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/loosing-page",
-    element: <PlayerProvider>
-      <LosingScreen />
-    </PlayerProvider>
-    ,
+    element: (
+      <PlayerProvider>
+        <LosingScreen />
+      </PlayerProvider>
+    ),
   },
   {
     path: "/winning-page",

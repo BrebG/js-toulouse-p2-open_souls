@@ -11,11 +11,11 @@ function Loot1() {
   const { setEquippedItems } = useItem();
 
   const equipShield = (shield) => {
-    setEquippedItems(prev => ({
+    setEquippedItems((prev) => ({
       ...prev,
-      shield
+      shield,
     }));
-  }
+  };
 
   return (
     <div className="loot-background">
@@ -28,7 +28,11 @@ function Loot1() {
         <h1>Loots</h1>
         <section className="loot-choice">
           <div className="left-loot">
-            <Link to="/mimic-choice" className="choice-loot" onClick={() => equipShield(shieldStuff[0])}>
+            <Link
+              to="/mimic-choice"
+              className="choice-loot"
+              onClick={() => equipShield(shieldStuff[0])}
+            >
               <p>{shieldStuff[0]?.name}</p>
             </Link>
             <div
@@ -46,7 +50,11 @@ function Loot1() {
             </div>
           </div>
           <div className="right-loot">
-            <Link to="/mimic-choice" className="choice-loot" onClick={() => equipShield(shieldStuff[1])}>
+            <Link
+              to="/mimic-choice"
+              className="choice-loot"
+              onClick={() => equipShield(shieldStuff[1])}
+            >
               <p>{shieldStuff[1]?.name}</p>
             </Link>
             <div

@@ -12,12 +12,12 @@ function CharSelect() {
   const navigate = useNavigate();
 
   function chooseClass() {
-    setChosenClass(classes[classIndex])
+    setChosenClass(classes[classIndex]);
   }
   const handleButtonClick = () => {
     chooseClass();
-    navigate('/choice-selection');
-  }
+    navigate("/choice-selection");
+  };
 
   useEffect(() => {
     fetch("https://eldenring.fanapis.com/api/classes")
@@ -62,7 +62,7 @@ function CharSelect() {
       >
         START
       </button>
-    </div >
+    </div>
   );
 }
 

@@ -8,7 +8,6 @@ import { useName } from "../contexts/NameContext";
 import { usePlayerHealth } from "../contexts/PlayerContext";
 import { useItem } from "../contexts/ItemContext";
 
-
 function CombatScreenGodefrey() {
   const { name } = useName();
   const { chosenClass } = useStats();
@@ -45,19 +44,21 @@ function CombatScreenGodefrey() {
         playerImage.classList.remove("shaking");
       }, 500);
     }
-  
+
+    // À supprimer
+
     setPlayerHealth((prevPlayerHealth) =>
       Math.max(prevPlayerHealth - damage, 0)
-    );shakePlayer();
+    );
+    shakePlayer();
   };
-
 
   const [damageInterval, setDamageInterval] = useState(null);
 
   useEffect(() => {
-    const shieldDefence = equippedItems.shield.defence?.[0].amount
+    const shieldDefence = equippedItems.shield.defence?.[0].amount;
     const interval = setInterval(() => {
-      receiveDamage(20 - Math.floor((shieldDefence / 10 || 0)));
+      receiveDamage(20 - Math.floor(shieldDefence / 10 || 0));
     }, 2500);
     setDamageInterval(interval);
 
@@ -67,8 +68,7 @@ function CombatScreenGodefrey() {
   const cancelDamage = () => {
     clearInterval(damageInterval);
     setDamageInterval(null);
-  }
-
+  };
 
   const [ennemyHealth, setEnnemyHealth] = useState(Math.floor(150));
 

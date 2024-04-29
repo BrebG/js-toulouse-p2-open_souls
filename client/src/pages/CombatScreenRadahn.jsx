@@ -38,9 +38,17 @@ function CombatScreenRadahn() {
   };
 
   const receiveDamage = (damage) => {
-    setPlayerHealth((prevPlayerHealth) =>
-      Math.max(prevPlayerHealth - damage, 0)
-    );
+    const playerImage = document.querySelector(".Player img");
+    function shakePlayer() {
+      playerImage.classList.add("shaking");
+      setTimeout(() => {
+        playerImage.classList.remove("shaking");
+      }, 500);
+      
+  }
+  setPlayerHealth((prevPlayerHealth) =>
+  Math.max(prevPlayerHealth - damage, 0)
+);shakePlayer();
   };
 
   const [damageInterval, setDamageInterval] = useState(null);

@@ -8,6 +8,7 @@ import { useName } from "../contexts/NameContext";
 import { usePlayerHealth } from "../contexts/PlayerContext";
 import { useItem } from "../contexts/ItemContext";
 
+
 function CombatScreenGodefrey() {
   const { name } = useName();
   const { chosenClass } = useStats();
@@ -36,17 +37,25 @@ function CombatScreenGodefrey() {
     name,
     image: chosenClass.image,
   };
-
   const receiveDamage = (damage) => {
+    const playerImage = document.querySelector(".Player img");
+    function shakePlayer() {
+      playerImage.classList.add("shaking");
+      setTimeout(() => {
+        playerImage.classList.remove("shaking");
+      }, 500);
+    }
+  
     setPlayerHealth((prevPlayerHealth) =>
       Math.max(prevPlayerHealth - damage, 0)
-    );
+    );shakePlayer();
   };
-  const shieldDefence = equippedItems.shield.defence?.[0].amount
+
 
   const [damageInterval, setDamageInterval] = useState(null);
 
   useEffect(() => {
+    const shieldDefence = equippedItems.shield.defence?.[0].amount
     const interval = setInterval(() => {
       receiveDamage(20 - Math.floor((shieldDefence / 10 || 0)));
     }, 2500);

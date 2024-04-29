@@ -29,6 +29,15 @@ function CombatAction({ dealDamage }) {
       heavyAttackDelay);
   };
 
+  const enemyImage = document.querySelector(".Ennemy img");
+  function shakeEnemy() {
+    enemyImage.classList.add("shaking");
+    setTimeout(() => {
+      enemyImage.classList.remove("shaking");
+    }, 500);
+  }
+
+
   return (
     <div className="CombatAction">
       <button
@@ -37,6 +46,7 @@ function CombatAction({ dealDamage }) {
         onClick={() => {
           dealDamage(Math.floor(10 * ((chosenClass.stats.strength / 10) + (weapon.attack[0].amount / 100))));
           disableButtonLight();
+          shakeEnemy();
         }}
       >
         Light attack
@@ -47,6 +57,7 @@ function CombatAction({ dealDamage }) {
         onClick={() => {
           dealDamage(Math.floor(10 * ((chosenClass.stats.strength / 10) + (weapon.attack[0].amount / 100))) + 10);
           disableButtonHeavy();
+          shakeEnemy();
         }}
       >
         Heavy attack

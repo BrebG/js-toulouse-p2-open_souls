@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import InputCode from "../components/InputCode";
-import "./HomePage.scss";
+import "./Homepage.scss";
 
 function Homepage() {
   return (

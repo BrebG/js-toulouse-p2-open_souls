@@ -1,17 +1,15 @@
-import PropTypes from "prop-types";
+import { useName } from "../contexts/NameContext";
+import { usePlayerHealth } from "../contexts/PlayerContext";
 
-function Lifebar({ playerHealth, playerName }) {
+function Lifebar() {
+  const { name } = useName();
+  const { playerHealth } = usePlayerHealth();
   return (
     <div className="Lifebar">
-      <p>{playerName}</p>
+      <p>{name}</p>
       <div style={{ width: `${playerHealth}%` }}>{playerHealth}%</div>
     </div>
   );
 }
-
-Lifebar.propTypes = {
-  playerName: PropTypes.string.isRequired,
-  playerHealth: PropTypes.number.isRequired,
-};
 
 export default Lifebar;

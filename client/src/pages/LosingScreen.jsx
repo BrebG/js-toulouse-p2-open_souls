@@ -10,7 +10,13 @@ function LosingScreen() {
   return (
     <div className="you-died-container">
       <h1 className="you-died-text">YOU DIED!</h1>
-      <Link to="/" className="retry-button" onClick={setPlayerHealth(Math.round(100 * (chosenClass.stats.vigor / 10)))}>
+      <Link
+        to="/"
+        className="retry-button"
+        onClick={setPlayerHealth(
+          Math.round(100 * (chosenClass.stats.vigor / 10))
+        )}
+      >
         TRY AGAIN
       </Link>
     </div>

@@ -1,13 +1,15 @@
 import PropTypes from "prop-types";
 import "../pages/CombatScreen.scss";
 import PlayerLifebar from "./PlayerLifebar";
+import { useName } from "../contexts/NameContext";
 
-function Player({ image, PlayerName, PlayerHealth }) {
+function Player({ image }) {
+  const { name } = useName();
   return (
     <div className="Player">
-      <img src={image} alt={PlayerName} />
+      <img src={image} alt={name} />
       <div>
-        <PlayerLifebar PlayerHealth={PlayerHealth} />
+        <PlayerLifebar />
       </div>
     </div>
   );
@@ -15,8 +17,6 @@ function Player({ image, PlayerName, PlayerHealth }) {
 
 Player.propTypes = {
   image: PropTypes.string.isRequired,
-  PlayerName: PropTypes.string.isRequired,
-  PlayerHealth: PropTypes.number.isRequired,
 };
 
 export default Player;

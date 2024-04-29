@@ -1,4 +1,4 @@
-const EldenTexts = [
+export const EldenTexts = [
   {
     id: 1,
     content:
@@ -7,7 +7,7 @@ const EldenTexts = [
   {
     id: 2,
     content:
-      "Hello fallen soul, the happy life you once knew is no more. If you wish to reclaim it, you must accomplish several tasks for me",
+      "Hello fallen soul, the happy life you once knew is no more. If you wish to reclaim it, you must accomplish several tasks for me.",
   }, // Le deuxième ID est la voix, si possible mettre un CSS en italique pour la compréhension du joueur
   {
     id: 3,
@@ -27,12 +27,12 @@ const EldenTexts = [
   {
     id: 6,
     content:
-      "Old chest: You find an immense katana, the voice tells you that it's the Nagakiba, a powerful blade that will be of great use to you.",
+      "You find an immense katana, the voice tells you that it's the Nagakiba, a powerful blade that will be of great use to you.",
   },
   {
     id: 65,
     content:
-      "Small chest: You find a worn straight sword, the voice tells you that this sword isn't very powerful but it's better than nothing.",
+      "You find a worn straight sword, the voice tells you that this sword isn't very powerful but it's better than nothing.",
     // Les sixième ID représente les deux premiers loots et leur contenant
   },
   {
@@ -62,13 +62,13 @@ const EldenTexts = [
   },
   {
     id: 12,
-    content: "It was a Mimic that you defeated.",
+    content: "It was a Mimic but he was stronger than you...",
     // Si, on ouvre le coffre, alors, perte de ___% d'hp | faible % de chance d'être tué avec un lancé de dés.
   },
   {
     id: 13,
     content: "Pass by.",
-    // Si on passe le chemin, alors, le joueur ne pert pas d'hp
+    // Si on passe le chemin, alors, le joueur ne perd pas d'hp
   },
   {
     id: 14,
@@ -78,17 +78,17 @@ const EldenTexts = [
   },
   {
     id: 15,
-    content: "Beware, appearances can sometimes be deceptive in this world.",
+    content: "Continue on your way or search the body ?",
     // C'est une phrase de la voix, à mettre en ITALIQUE
   },
   {
     id: 16,
-    content: "Sneak past.",
+    content: "Sneak past",
     // Rien ne se passe vous courez pour vous éloigner du cadavre et tombez au sol ___% pv en fonction du jet de dés
   },
   {
     id: 17,
-    content: "Take the dagger.",
+    content: "Approach the body",
     // Vous obtenez la dague "Reduvia", une dague puissante
   },
   {
@@ -134,10 +134,10 @@ const EldenTexts = [
     content:
       "You regain consciousness, discovering that you are in a village halfway destroyed and deserted. In front of you, an old forge stands, very dark. You can't quite make out what might be inside.",
   },
-  // C'est votre arriver dans la première zone de MHW
+  // C'est votre arrivée dans la première zone de MHW
 ];
 // MONDE DE MONSTER HUNTER WORLD
-const MHWTexts = [
+export const MHWTexts = [
   {
     id: 1,
     content:
@@ -153,7 +153,7 @@ const MHWTexts = [
   {
     id: 3,
     content: "Scamper away quickly.",
-    // Jet de dés = Petite chance de tomber et de briser votre bouclier (De le faire tomber dans un lieu inaccessible serais plus logique) | Rien ne se passe
+    // Jet de dés = Petite chance de tomber et de briser votre bouclier (De le faire tomber dans un lieu inaccessible serait plus logique) | Rien ne se passe
   },
   {
     id: 4,
@@ -247,7 +247,7 @@ const MHWTexts = [
       "Once again, you fall into the void; you're not so scared anymore, beginning to get used to it, knowing at least you won't be unconscious during the journey. Unfortunately, your shield hits your head; you black out.",
   },
 ];
-const WCSTexts = [
+export const WCSTexts = [
   // DEBUT DU MONDE WILD CODE SCHOOL
   {
     id: 1,
@@ -300,4 +300,3 @@ const WCSTexts = [
     // Proposition de relancer la partie
   },
 ];
-export default { EldenTexts, MHWTexts, WCSTexts };

@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-.CombatScreen {
+.CombatScreenRadahn {
   position: fixed;
   top: 0%;
   left: 0;
@@ -33,17 +33,18 @@
 
     .CombatAction {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       border: 2px solid var(--lighter-color);
       background-color: var(--main-color);
-      width: 30vw;
+      width: 100vw;
 
       button {
         border: 2px solid var(--lighter-color);
         background-color: var(--main-color);
         color: var(--lighter-color);
-        height: 15vh;
+        height: 100%;
+        width: 100%;
       }
     }
   }
@@ -57,10 +58,15 @@
     }
 
     div {
+      display: flex;
+      justify-content: center;
       background-color: #910000;
       height: 1.2rem;
       border-radius: 50px;
       box-shadow: 2px;
+      color: white;
+      padding-left: 1rem;
+      text-shadow: 3px black;
     }
   }
 
@@ -74,11 +80,12 @@
     padding-left: 25vw;
     font-family: "Cinzel", serif;
     height: 37vh;
-    padding-top: 15vh;
+    padding-top: 45vh;
+    flex-wrap: wrap-reverse;
 
     img {
       padding-top: 2rem;
-      height: 16.25rem;
+      height: 20.25rem;
     }
 
     div {
@@ -88,7 +95,7 @@
       p {
         padding-top: 1rem;
         margin: 0;
-        font-size: 0.8rem;
+        font-size: 1rem;
       }
 
       .description {
@@ -100,12 +107,23 @@
         color: #fafafa;
         border-radius: 5px;
       }
+
+      .Lifebar {
+        p {
+          font-size: 1rem;
+          color: #fafafa;
+          font-family: var(--main-font);
+          font-weight: 500;
+          text-shadow: 3px 3px 3px black;
+        }
+      }
     }
   }
 
   .Player {
     margin: 0 auto;
     justify-content: center;
+    flex-wrap: wrap-reverse;
 
     height: 37vh;
     display: flex;
@@ -116,7 +134,7 @@
     font-family: "Cinzel", serif;
 
     img {
-      padding-top: 2rem;
+      // padding-top: 2rem;
       height: 20rem;
     }
 
@@ -128,14 +146,199 @@
     .Lifebar {
       display: flex;
       flex-direction: column;
+
+      p {
+        font-size: 1rem;
+        color: #fafafa;
+        font-family: var(--main-font);
+        font-weight: 500;
+        text-shadow: 3px 3px 3px black;
+      }
     }
   }
 
   .bottomSection {
     display: flex;
+  }
+}
+
+.CombatScreenGodefrey {
+  position: fixed;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./src/assets/images/elden-text-arena-id-7-8-9.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  .TopSection {
+    height: 80vh;
+  }
+
+  .BottomSection {
+    display: flex;
+    height: 20vh;
+    width: 100vw;
+    border: 2px solid var(--lighter-color);
+    background: var(--main-color);
 
     .CombatLog {
-      color: #910000;
+      width: 70vw;
+      height: max-content;
+    }
+
+    .CombatAction {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      border: 2px solid var(--lighter-color);
+      background-color: var(--main-color);
+      width: 100vw;
+
+      button {
+        border: 2px solid var(--lighter-color);
+        background-color: var(--main-color);
+        color: var(--lighter-color);
+        height: 100%;
+        width: 100%;
+      }
     }
   }
+
+  .Lifebar {
+    width: 10rem;
+
+    p {
+      font-weight: 900;
+      margin: 0;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      background-color: #910000;
+      height: 1.2rem;
+      border-radius: 50px;
+      box-shadow: 2px;
+      color: white;
+      padding-left: 1rem;
+      text-shadow: 3px black;
+    }
+  }
+
+  .Ennemy {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    color: black;
+    padding-top: 2rem;
+    padding-left: 25vw;
+    font-family: "Cinzel", serif;
+    height: 37vh;
+    padding-top: 45vh;
+    flex-wrap: wrap-reverse;
+
+    img {
+      padding-top: 2rem;
+      height: 20.25rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        padding-top: 1rem;
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      .description {
+        max-width: 15rem;
+        padding: 1rem;
+        margin: 0;
+        font-size: 0.8rem;
+        background-color: #1a2325e0;
+        color: #fafafa;
+        border-radius: 5px;
+      }
+
+      .Lifebar {
+        p {
+          font-size: 1rem;
+          color: #fafafa;
+          font-family: var(--main-font);
+          font-weight: 500;
+          text-shadow: 3px 3px 3px black;
+        }
+      }
+    }
+  }
+
+  .Player {
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+
+    height: 37vh;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    padding-right: 25vw;
+    padding-bottom: 2rem;
+    font-family: "Cinzel", serif;
+
+    img {
+      // padding-top: 2rem;
+      height: 20rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .Lifebar {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        font-size: 1rem;
+        color: #fafafa;
+        font-family: var(--main-font);
+        font-weight: 500;
+        text-shadow: 3px 3px 3px black;
+      }
+    }
+  }
+
+  .bottomSection {
+    display: flex;
+  }
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shaking {
+  animation: horizontal-shaking 0.5s infinite;
 }

@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import "./ClassSelect.scss";
 import CharStats from "./CharStats";
 
@@ -22,10 +22,10 @@ ClassSelect.propTypes = {
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     stats: PropTypes.shape({
-      level: PropTypes.number.isRequired,
-      vigor: PropTypes.number.isRequired,
-      strength: PropTypes.number.isRequired,
-      dexterity: PropTypes.number.isRequired,
+      level: PropTypes.string.isRequired,
+      vigor: PropTypes.string.isRequired,
+      strength: PropTypes.string.isRequired,
+      dexterity: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 };

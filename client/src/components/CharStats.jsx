@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import "./CharStats.scss";
 
 function CharStats({ classe }) {
@@ -16,10 +16,10 @@ function CharStats({ classe }) {
 CharStats.propTypes = {
   classe: PropTypes.shape({
     stats: PropTypes.shape({
-      level: PropTypes.number.isRequired,
-      vigor: PropTypes.number.isRequired,
-      strength: PropTypes.number.isRequired,
-      dexterity: PropTypes.number.isRequired,
+      level: PropTypes.string.isRequired,
+      vigor: PropTypes.string.isRequired,
+      strength: PropTypes.string.isRequired,
+      dexterity: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 };

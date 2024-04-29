@@ -1,22 +1,69 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
+import { useStats } from "../contexts/StatsContext";
+import { useItem } from "../contexts/ItemContext";
 
-function CombatAction({ dealDamage, receiveDamage }) {
+function CombatAction({ dealDamage }) {
+  const [isButtonDisabled, setButtonDisabled] = useState(false);
+  const { chosenClass } = useStats();
+  const lightAttackDelay = 1500 - Number(chosenClass.stats.dexterity);
+  const heavyAttackDelay = 4000 - Number(chosenClass.stats.dexterity);
+  const { equippedItems } = useItem();
+  const { weapon } = equippedItems;
+
+  const disableButtonLight = () => {
+    setButtonDisabled(true);
+    setTimeout(() => {
+      setButtonDisabled(false);
+    }, lightAttackDelay);
+  };
+  const disableButtonHeavy = () => {
+    setButtonDisabled(true);
+    setTimeout(() => {
+      setButtonDisabled(false);
+    }, heavyAttackDelay);
+  };
+
+  const enemyImage = document.querySelector(".Ennemy img");
+  function shakeEnemy() {
+    enemyImage.classList.add("shaking");
+    setTimeout(() => {
+      enemyImage.classList.remove("shaking");
+    }, 500);
+  }
+
   return (
     <div className="CombatAction">
       <button
         type="button"
+        disabled={isButtonDisabled}
         onClick={() => {
-          dealDamage(10);
-          receiveDamage(10);
+          dealDamage(
+            Math.floor(
+              10 *
+                (chosenClass.stats.strength / 10 +
+                  weapon.attack[0].amount / 100)
+            )
+          );
+          disableButtonLight();
+          shakeEnemy();
         }}
       >
         Light attack
       </button>
       <button
         type="button"
+        disabled={isButtonDisabled}
         onClick={() => {
-          dealDamage(20);
-          receiveDamage(10);
+          dealDamage(
+            Math.floor(
+              10 *
+                (chosenClass.stats.strength / 10 +
+                  weapon.attack[0].amount / 100)
+            ) + 10
+          );
+          disableButtonHeavy();
+          shakeEnemy();
         }}
       >
         Heavy attack
@@ -27,7 +74,6 @@ function CombatAction({ dealDamage, receiveDamage }) {
 
 CombatAction.propTypes = {
   dealDamage: PropTypes.func.isRequired,
-  receiveDamage: PropTypes.func.isRequired,
 };
 
 export default CombatAction;

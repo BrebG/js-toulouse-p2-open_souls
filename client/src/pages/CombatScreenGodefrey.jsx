@@ -89,7 +89,7 @@ function CombatScreenGodefrey() {
   }, [playerHealth, navigate]);
 
   return (
-    <div className="CombatScreen">
+    <div className="CombatScreenGodefrey">
       <div className="TopSection">
         <Ennemy
           ennemyHealth={ennemyHealth}

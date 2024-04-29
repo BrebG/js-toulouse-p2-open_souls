@@ -4,7 +4,6 @@ import { createContext, useContext, useMemo, useState } from "react";
 export const StatContext = createContext();
 
 export function StatsProvider({ children }) {
-
   const [chosenClass, setChosenClass] = useState([]);
 
   const statsValue = useMemo(

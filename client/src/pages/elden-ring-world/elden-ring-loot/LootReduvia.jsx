@@ -10,11 +10,11 @@ function LootReduvia() {
   const { setEquippedItems } = useItem();
 
   const equipWeapon = (weapon) => {
-    setEquippedItems(prev => ({
+    setEquippedItems((prev) => ({
       ...prev,
-      weapon
+      weapon,
     }));
-  }
+  };
 
   return (
     <div className="loot-background">
@@ -27,7 +27,11 @@ function LootReduvia() {
         <h1>Loots</h1>
         <section className="loot-choice">
           <div className="left-loot">
-            <Link to="/boss-fight-radahn" className="choice-loot" onClick={() => equipWeapon(weaponStuff[2])}>
+            <Link
+              to="/boss-fight-radahn"
+              className="choice-loot"
+              onClick={() => equipWeapon(weaponStuff[2])}
+            >
               <p>{weaponStuff[2]?.name}</p>
             </Link>
             {/* rajouter le onClick */}
@@ -49,7 +53,7 @@ function LootReduvia() {
             <div className="weapon-stats-left">
               <ul>
                 <p>{weaponStuff[2]?.name}</p>
-                <li>attack 🗡️ {weaponStuff[2]?.attack[5].amount}</li>
+                <li>dexterity 🗡️ {weaponStuff[2]?.attack[5].amount}</li>
                 <li>{weaponStuff[2]?.description}</li>
               </ul>
             </div>

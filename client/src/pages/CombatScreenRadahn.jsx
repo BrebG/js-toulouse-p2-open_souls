@@ -81,7 +81,7 @@ function CombatScreenRadahn() {
   }, [playerHealth, navigate]);
 
   return (
-    <div className="CombatScreen">
+    <div className="CombatScreenRadahn">
       <div className="TopSection">
         <Ennemy
           ennemyHealth={ennemyHealth}

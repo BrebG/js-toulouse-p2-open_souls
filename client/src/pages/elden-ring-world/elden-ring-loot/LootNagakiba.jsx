@@ -10,11 +10,11 @@ function LootNagakiba() {
   const { setEquippedItems } = useItem();
 
   const equipWeapon = (weapon) => {
-    setEquippedItems(prev => ({
+    setEquippedItems((prev) => ({
       ...prev,
-      weapon
+      weapon,
     }));
-  }
+  };
 
   return (
     <div className="loot-background">
@@ -27,7 +27,10 @@ function LootNagakiba() {
         <h1>Loots</h1>
         <section className="loot-choice">
           <div className="left-loot">
-            <Link to="/boss-fight-godefroy" className="choice-loot" onClick={() => equipWeapon(weaponStuff[0])}
+            <Link
+              to="/boss-fight-godefroy"
+              className="choice-loot"
+              onClick={() => equipWeapon(weaponStuff[0])}
             >
               <p>{weaponStuff[0]?.name}</p>
             </Link>
@@ -49,7 +52,7 @@ function LootNagakiba() {
             <div className="weapon-stats-left">
               <ul>
                 <p>{weaponStuff[0]?.name}</p>
-                <li>attack 🗡️ {weaponStuff[0]?.defence[0].amount}</li>
+                <li>dexterity 🗡️ {weaponStuff[0]?.defence[0].amount}</li>
                 <li>{weaponStuff[0]?.description}</li>
               </ul>
             </div>

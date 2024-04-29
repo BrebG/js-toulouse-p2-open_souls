@@ -1,13 +1,13 @@
 .loot-background {
-    background-image: url("./src/assets/images/loot-background.png");
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  }
+  background-image: url("./src/assets/images/loot-background.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 
 .right-item-img .left-item-img {
   width: clamp(1rem, 70%, 12rem);

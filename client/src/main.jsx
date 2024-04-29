@@ -22,6 +22,7 @@ import LootNagakiba from "./pages/elden-ring-world/elden-ring-loot/LootNagakiba"
 import LootSword from "./pages/elden-ring-world/elden-ring-loot/LootSword";
 import LootGodefrey from "./pages/elden-ring-world/elden-ring-loot/LootGodefrey";
 import LootRadahn from "./pages/elden-ring-world/elden-ring-loot/LootRadahn";
+import EndScreen from "./pages/elden-ring-world/EndScreen";
 import { ItemProvider } from "./contexts/ItemContext";
 import { PlayerProvider } from "./contexts/PlayerContext";
 
@@ -113,6 +114,10 @@ const router = createBrowserRouter([
   {
     path: "/sneak-past",
     element: <SneakPast />,
+  },
+  {
+    path: "/end-screen",
+    element: <EndScreen />,
   },
   {
     path: "/loot-radahn",

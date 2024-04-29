@@ -70,7 +70,7 @@ function CombatScreenRadahn() {
   useEffect(() => {
     if (ennemyHealth === 0) {
       cancelDamage();
-      navigate("/loot-1");
+      navigate("/winning-page");
     }
   }, [ennemyHealth, navigate]);
 

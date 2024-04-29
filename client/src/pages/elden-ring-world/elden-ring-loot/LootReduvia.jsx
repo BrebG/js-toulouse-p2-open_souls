@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./LootReduvia.scss";
 import useItems from "../../../tools/useItems";
 import { useItem } from "../../../contexts/ItemContext";
+import "../../../pages/ItemLoot.scss";
 
 function LootReduvia() {
   const [isShown, setIsShown] = useState(false);

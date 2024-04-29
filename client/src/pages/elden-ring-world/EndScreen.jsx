@@ -11,8 +11,8 @@ function EndScreen() {
           available very soon.
         </p>
       </div>
-      <Link className="end-screen-button" to="/">
-        Home
+      <Link className="end-screen-button" to="/winning-page">
+        Next
       </Link>
     </div>
   );

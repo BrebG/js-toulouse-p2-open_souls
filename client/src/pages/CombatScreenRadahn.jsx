@@ -78,7 +78,7 @@ function CombatScreenRadahn() {
   useEffect(() => {
     if (ennemyHealth === 0) {
       cancelDamage();
-      navigate("/winning-page");
+      navigate("/end-screen");
     }
   }, [ennemyHealth, navigate]);
 

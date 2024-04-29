@@ -13,10 +13,10 @@ export function ItemProvider({ children }) {
   );
 }
 
-ItemProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
 export function useItem() {
   return useContext(ItemContext);
 }
+
+ItemProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};

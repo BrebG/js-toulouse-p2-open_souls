@@ -11,10 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/{{ org }}/js-toulouse-p2-open_souls.git"
   },
-  "workspaces": [
-    "client",
-    "server"
-  ],
+  "workspaces": ["client", "server"],
   "scripts": {
     "postinstall": "husky install",
     "db:migrate": "npm run db:migrate --workspace=server",

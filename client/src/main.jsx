@@ -21,6 +21,8 @@ import Loot1 from "./pages/elden-ring-world/elden-ring-loot/Loot1";
 import LootReduvia from "./pages/elden-ring-world/elden-ring-loot/LootReduvia";
 import LootNagakiba from "./pages/elden-ring-world/elden-ring-loot/LootNagakiba";
 import LootSword from "./pages/elden-ring-world/elden-ring-loot/LootSword";
+import { ItemProvider } from "./contexts/ItemContext";
+import { PlayerProvider } from "./contexts/PlayerContext";
 
 const router = createBrowserRouter([
   {
@@ -33,15 +35,24 @@ const router = createBrowserRouter([
   },
   {
     path: "/choice-selection",
-    element: <FirstChoicePage />,
+    element:
+      <PlayerProvider>
+        <FirstChoicePage />
+      </PlayerProvider>,
   },
   {
     path: "/boss-fight-godefroy",
-    element: <CombatScreenGodefrey />,
+    element: <PlayerProvider>
+      <CombatScreenGodefrey />
+    </PlayerProvider>
+    ,
   },
   {
     path: "/boss-fight-radahn",
-    element: <CombatScreenRadahn />,
+    element: <PlayerProvider>
+      <CombatScreenRadahn />
+    </PlayerProvider>
+    ,
   },
   {
     path: "/loot-godefrey",
@@ -49,7 +60,10 @@ const router = createBrowserRouter([
   },
   {
     path: "/loosing-page",
-    element: <LosingScreen />,
+    element: <PlayerProvider>
+      <LosingScreen />
+    </PlayerProvider>
+    ,
   },
   {
     path: "/winning-page",
@@ -100,9 +114,11 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <NameProvider>
-    <StatsProvider>
-      <RouterProvider router={router} />
-    </StatsProvider>
-  </NameProvider>
+  <ItemProvider>
+    <NameProvider>
+      <StatsProvider>
+        <RouterProvider router={router} />
+      </StatsProvider>
+    </NameProvider>
+  </ItemProvider>
 );

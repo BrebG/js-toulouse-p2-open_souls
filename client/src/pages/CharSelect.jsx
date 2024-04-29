@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./CharSelect.scss";
 import { useEffect, useState } from "react";
 import ClassSelect from "../components/ClassSelect";
@@ -9,6 +9,15 @@ function CharSelect() {
   const [classIndex, setClassIndex] = useState(0);
   const [classes, setClasses] = useState([]);
   const { setChosenClass } = useStats();
+  const navigate = useNavigate();
+
+  function chooseClass() {
+    setChosenClass(classes[classIndex])
+  }
+  const handleButtonClick = () => {
+    chooseClass();
+    navigate('/choice-selection');
+  }
 
   useEffect(() => {
     fetch("https://eldenring.fanapis.com/api/classes")
@@ -46,14 +55,14 @@ function CharSelect() {
         </button>
       </div>
       <InputName />
-      <Link
-        to="/choice-selection"
+      <button
+        type="button"
         className="class-button"
-        onClick={setChosenClass(classes[classIndex])}
+        onClick={handleButtonClick}
       >
         START
-      </Link>
-    </div>
+      </button>
+    </div >
   );
 }
 

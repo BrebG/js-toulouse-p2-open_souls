@@ -17,10 +17,11 @@ import OpenChest from "./pages/elden-ring-world/OpenChest";
 import LastChoice from "./pages/elden-ring-world/LastChoice";
 import Reduvia from "./pages/elden-ring-world/Reduvia";
 import SneakPast from "./pages/elden-ring-world/SneakPast";
-import Loot1 from "./pages/elden-ring-world/elden-ring-loot/Loot1";
 import LootReduvia from "./pages/elden-ring-world/elden-ring-loot/LootReduvia";
 import LootNagakiba from "./pages/elden-ring-world/elden-ring-loot/LootNagakiba";
 import LootSword from "./pages/elden-ring-world/elden-ring-loot/LootSword";
+import LootGodefrey from "./pages/elden-ring-world/elden-ring-loot/LootGodefrey";
+import LootRadahn from "./pages/elden-ring-world/elden-ring-loot/LootRadahn";
 import { ItemProvider } from "./contexts/ItemContext";
 import { PlayerProvider } from "./contexts/PlayerContext";
 
@@ -35,35 +36,39 @@ const router = createBrowserRouter([
   },
   {
     path: "/choice-selection",
-    element:
+    element: (
       <PlayerProvider>
         <FirstChoicePage />
-      </PlayerProvider>,
+      </PlayerProvider>
+    ),
   },
   {
     path: "/boss-fight-godefroy",
-    element: <PlayerProvider>
-      <CombatScreenGodefrey />
-    </PlayerProvider>
-    ,
+    element: (
+      <PlayerProvider>
+        <CombatScreenGodefrey />
+      </PlayerProvider>
+    ),
   },
   {
     path: "/boss-fight-radahn",
-    element: <PlayerProvider>
-      <CombatScreenRadahn />
-    </PlayerProvider>
-    ,
+    element: (
+      <PlayerProvider>
+        <CombatScreenRadahn />
+      </PlayerProvider>
+    ),
   },
   {
     path: "/loot-godefrey",
-    element: <Loot1 />,
+    element: <LootGodefrey />,
   },
   {
     path: "/loosing-page",
-    element: <PlayerProvider>
-      <LosingScreen />
-    </PlayerProvider>
-    ,
+    element: (
+      <PlayerProvider>
+        <LosingScreen />
+      </PlayerProvider>
+    ),
   },
   {
     path: "/winning-page",
@@ -108,6 +113,10 @@ const router = createBrowserRouter([
   {
     path: "/sneak-past",
     element: <SneakPast />,
+  },
+  {
+    path: "/loot-radahn",
+    element: <LootRadahn />,
   },
 ]);
 

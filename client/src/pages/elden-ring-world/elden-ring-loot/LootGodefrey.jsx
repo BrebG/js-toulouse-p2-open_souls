@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Loot1.scss";
+import "./LootGodefrey.scss";
 import useItems from "../../../tools/useItems";
 import { useItem } from "../../../contexts/ItemContext";
 
-function Loot1() {
+function LootGodefrey() {
   const [isShownLeft, setIsShownLeft] = useState(false);
   const [isShownRight, setIsShownRight] = useState(false);
   const { shieldStuff } = useItems();
@@ -87,4 +87,4 @@ function Loot1() {
   );
 }
 
-export default Loot1;
+export default LootGodefrey;

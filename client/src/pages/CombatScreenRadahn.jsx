@@ -46,9 +46,9 @@ function CombatScreenRadahn() {
   const [damageInterval, setDamageInterval] = useState(null);
 
   useEffect(() => {
-    const shieldDefence = equippedItems.shield.defence?.[0].amount
+    const shieldDefence = equippedItems.shield.defence?.[0].amount;
     const interval = setInterval(() => {
-      receiveDamage(30 - Math.floor((shieldDefence / 10 || 0)));
+      receiveDamage(30 - Math.floor(shieldDefence / 10 || 0));
     }, 2000);
     setDamageInterval(interval);
 
@@ -58,7 +58,7 @@ function CombatScreenRadahn() {
   const cancelDamage = () => {
     clearInterval(damageInterval);
     setDamageInterval(null);
-  }
+  };
 
   const [ennemyHealth, setEnnemyHealth] = useState(Math.floor(150));
 
@@ -73,7 +73,6 @@ function CombatScreenRadahn() {
       navigate("/winning-page");
     }
   }, [ennemyHealth, navigate]);
-
 
   useEffect(() => {
     if (playerHealth === 0) {

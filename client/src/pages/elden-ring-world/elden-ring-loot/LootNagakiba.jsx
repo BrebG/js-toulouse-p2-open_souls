@@ -49,7 +49,7 @@ function LootNagakiba() {
             <div className="weapon-stats-left">
               <ul>
                 <p>{weaponStuff[0]?.name}</p>
-                <li>attack 🗡️ {weaponStuff[0]?.defence[0].amount}</li>
+                <li>dexterity 🗡️ {weaponStuff[0]?.defence[0].amount}</li>
                 <li>{weaponStuff[0]?.description}</li>
               </ul>
             </div>

@@ -49,7 +49,7 @@ function LootReduvia() {
             <div className="weapon-stats-left">
               <ul>
                 <p>{weaponStuff[2]?.name}</p>
-                <li>attack 🗡️ {weaponStuff[2]?.attack[5].amount}</li>
+                <li>dexterity 🗡️ {weaponStuff[2]?.attack[5].amount}</li>
                 <li>{weaponStuff[2]?.description}</li>
               </ul>
             </div>

@@ -42,7 +42,7 @@ function CombatScreenGodefrey() {
   };
   useEffect(() => {
     if (ennemyHealth === 0) {
-      navigate("/loot-1");
+      navigate("/loot-godefrey");
     }
   }, [ennemyHealth, navigate]);
 

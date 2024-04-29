@@ -72,8 +72,6 @@ function CombatAction({ dealDamage }) {
   );
 }
 
-// À supprimer
-
 CombatAction.propTypes = {
   dealDamage: PropTypes.func.isRequired,
 };

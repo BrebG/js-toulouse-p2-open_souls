@@ -68,8 +68,6 @@ function CombatScreenRadahn() {
     setDamageInterval(null);
   };
 
-  // À supprimer
-
   const [ennemyHealth, setEnnemyHealth] = useState(Math.floor(150));
 
   const dealDamage = (damage) => {

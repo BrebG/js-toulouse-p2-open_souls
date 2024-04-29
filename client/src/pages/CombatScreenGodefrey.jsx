@@ -45,8 +45,6 @@ function CombatScreenGodefrey() {
       }, 500);
     }
 
-    // À supprimer
-
     setPlayerHealth((prevPlayerHealth) =>
       Math.max(prevPlayerHealth - damage, 0)
     );

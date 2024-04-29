@@ -55,7 +55,7 @@ const router = createBrowserRouter([
     ,
   },
   {
-    path: "/loot-1",
+    path: "/loot-godefrey",
     element: <Loot1 />,
   },
   {

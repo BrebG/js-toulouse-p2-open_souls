@@ -55,6 +55,7 @@ function CombatAction({ dealDamage }) {
   );
 }
 
+
 CombatAction.propTypes = {
   dealDamage: PropTypes.func.isRequired,
 };

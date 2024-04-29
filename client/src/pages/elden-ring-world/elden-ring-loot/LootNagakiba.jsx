@@ -2,11 +2,20 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LootNagakiba.scss";
 import useItems from "../../../tools/useItems";
-import "../../../components/HoverItem.scss";
+import { useItem } from "../../../contexts/ItemContext";
 
 function LootNagakiba() {
   const [isShown, setIsShown] = useState(false);
   const { weaponStuff } = useItems();
+  const { setEquippedItems } = useItem();
+
+  const equipWeapon = (weapon) => {
+    setEquippedItems(prev => ({
+      ...prev,
+      weapon
+    }));
+  }
+
   return (
     <div className="loot-background">
       <div
@@ -18,10 +27,10 @@ function LootNagakiba() {
         <h1>Loots</h1>
         <section className="loot-choice">
           <div className="left-loot">
-            <Link to="/boss-fight-godefroy" className="choice-loot">
+            <Link to="/boss-fight-godefroy" className="choice-loot" onClick={() => equipWeapon(weaponStuff[0])}
+            >
               <p>{weaponStuff[0]?.name}</p>
             </Link>
-            {/* rajouter le onClick */}
             <div
               className="left-img"
               tabIndex={0}
@@ -50,5 +59,4 @@ function LootNagakiba() {
     </div>
   );
 }
-
 export default LootNagakiba;

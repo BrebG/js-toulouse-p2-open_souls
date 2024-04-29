@@ -11,7 +11,7 @@ function FirstChoicePage() {
   };
 
   return (
-    <div className={`choice-page ${loreIndex === 3 ? "new-class" : ""}`}>
+    <div className={`choice-page ${loreIndex >= 3 ? "small-old-chests" : ""}`}>
       <div className="story-text">
         <div className="lore-text">
           <p className="paragraph">{EldenTexts[loreIndex].content}</p>

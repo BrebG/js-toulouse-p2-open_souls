@@ -2,12 +2,20 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LootGodefrey.scss";
 import useItems from "../../../tools/useItems";
-import "../../../components/HoverItem.scss";
+import { useItem } from "../../../contexts/ItemContext";
 
 function LootGodefrey() {
   const [isShownLeft, setIsShownLeft] = useState(false);
   const [isShownRight, setIsShownRight] = useState(false);
   const { shieldStuff } = useItems();
+  const { setEquippedItems } = useItem();
+
+  const equipShield = (shield) => {
+    setEquippedItems(prev => ({
+      ...prev,
+      shield
+    }));
+  }
 
   return (
     <div className="loot-background">
@@ -20,10 +28,9 @@ function LootGodefrey() {
         <h1>Loots</h1>
         <section className="loot-choice">
           <div className="left-loot">
-            <Link to="/mimic-choice" className="choice-loot">
+            <Link to="/mimic-choice" className="choice-loot" onClick={() => equipShield(shieldStuff[0])}>
               <p>{shieldStuff[0]?.name}</p>
             </Link>
-            {/* rajouter le onClick */}
             <div
               className="left-img"
               tabIndex={0}
@@ -39,7 +46,7 @@ function LootGodefrey() {
             </div>
           </div>
           <div className="right-loot">
-            <Link to="/mimic-choice" className="choice-loot">
+            <Link to="/mimic-choice" className="choice-loot" onClick={() => equipShield(shieldStuff[1])}>
               <p>{shieldStuff[1]?.name}</p>
             </Link>
             <div

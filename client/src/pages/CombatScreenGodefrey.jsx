@@ -17,8 +17,8 @@ function CombatScreenGodefrey() {
 
   const sampleEnnemy = {
     id: "17f69a82a2el0i1uta5rxvqv53g7e",
-    name: "Godfrey, First Elden Lord (hoarah Loux)",
-    image: "./src/assets/godefrey.png",
+    name: "Godfrey, First Elden Lord",
+    image: "../../assets/godefrey.png",
     region: "Altus Plateau",
     description:
       "I've given thee courtesy enough. Now I fight as Hoarah Loux. Warrior!",

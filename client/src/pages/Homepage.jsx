@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import InputCode from "../components/InputCode";
 import "./Homepage.scss";
 
 function Homepage() {
@@ -24,8 +23,6 @@ function Homepage() {
           history?
         </p>
       </div>
-
-      <InputCode />
       <Link to="character-selection" className="home-button">
         NEXT
       </Link>

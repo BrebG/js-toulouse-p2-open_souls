@@ -84,8 +84,8 @@ function LootGodefrey() {
             <div className="weapon-stats-right">
               <ul>
                 <p>{shieldStuff[1]?.name}</p>
-                <li>defence 🗡️ {shieldStuff[0]?.defence[0].amount}</li>
-                <li>{shieldStuff[0]?.description}</li>
+                <li>defence 🗡️ {shieldStuff[1]?.defence[0].amount}</li>
+                <li>{shieldStuff[1]?.description}</li>
               </ul>
             </div>
           )}

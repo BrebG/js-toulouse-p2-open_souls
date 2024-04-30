@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./LootReduvia.scss";
 import useItems from "../../../tools/useItems";
 import { useItem } from "../../../contexts/ItemContext";
-import "../../../pages/ItemLoot.scss";
 
 function LootReduvia() {
   const [isShown, setIsShown] = useState(false);
@@ -28,7 +28,7 @@ function LootReduvia() {
         <section className="loot-choice">
           <div className="left-loot">
             <Link
-              to="/boss-fight-radahn"
+              to="/chose-dagger"
               className="choice-loot"
               onClick={() => equipWeapon(weaponStuff[2])}
             >

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./LootRadahn.scss";
 import useItems from "../../../tools/useItems";
 import "../../../components/HoverItem.scss";
+import "../../ItemLoot.scss";
 
 function LootRadahn() {
   const [isShownLeft, setIsShownLeft] = useState(false);

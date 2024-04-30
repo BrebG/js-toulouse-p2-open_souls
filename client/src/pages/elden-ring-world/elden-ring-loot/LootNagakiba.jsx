@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./LootNagakiba.scss";
 import useItems from "../../../tools/useItems";
 import { useItem } from "../../../contexts/ItemContext";
+import "../../ItemLoot.scss";
 
 function LootNagakiba() {
   const [isShown, setIsShown] = useState(false);

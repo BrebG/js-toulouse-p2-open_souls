@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./LootGodefrey.scss";
 import useItems from "../../../tools/useItems";
 import { useItem } from "../../../contexts/ItemContext";
+import "../../ItemLoot.scss";
 
 function LootGodefrey() {
   const [isShownLeft, setIsShownLeft] = useState(false);

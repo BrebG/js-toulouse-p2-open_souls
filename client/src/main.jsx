@@ -25,6 +25,7 @@ import LootRadahn from "./pages/elden-ring-world/elden-ring-loot/LootRadahn";
 import EndScreen from "./pages/elden-ring-world/EndScreen";
 import { ItemProvider } from "./contexts/ItemContext";
 import { PlayerProvider } from "./contexts/PlayerContext";
+import ChoseDagger from "./pages/elden-ring-world/ChoseDagger";
 
 const router = createBrowserRouter([
   {
@@ -122,6 +123,10 @@ const router = createBrowserRouter([
   {
     path: "/loot-radahn",
     element: <LootRadahn />,
+  },
+  {
+    path: "/chose-dagger",
+    element: <ChoseDagger />,
   },
 ]);
 

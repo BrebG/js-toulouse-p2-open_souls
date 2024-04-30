@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { EldenTexts } from "../../tools/ArrayLoreDialogue";
 
-function SneakPast() {
+function ChoseDagger() {
   const [loreIndex, setLoreIndex] = useState(19);
 
   const nextLore = () => {
@@ -15,10 +15,10 @@ function SneakPast() {
         <div className="lore-text">
           {loreIndex === 19 && (
             <p className="paragraph">
-              Nothing happens, you run to distance yourself from the corpse and
-              fall to the ground. You are thirsty and bruised... You lost
-              yourself in the desert, starting to hallucinate. You may meet your
-              end...
+              After taking the dagger you take the long red path in front of
+              you. You are thirsty and bruised... You lost yourself in a shady
+              desert, starting to hallucinate. You start to think that you will
+              meet your end.
             </p>
           )}
 
@@ -42,4 +42,4 @@ function SneakPast() {
   );
 }
 
-export default SneakPast;
+export default ChoseDagger;

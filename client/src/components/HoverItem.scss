@@ -1,5 +1,5 @@
 body {
-  background-color: bisque;
+  background-color: var(--darker-color);
 
   .weapon-stats-left {
     position: absolute;
@@ -17,13 +17,16 @@ body {
     background-color: rgba(19, 19, 19, 0.756);
     height: 50vh;
     width: 15rem;
+
     ul {
       padding: 0;
+
       h2 {
         padding: 0;
         font-size: 1.5rem;
         text-align: center;
       }
+
       li {
         font-size: 0.9rem;
         padding: 1rem;
@@ -31,6 +34,7 @@ body {
       }
     }
   }
+
   .weapon-stats-right {
     position: absolute;
     display: flex;
@@ -45,12 +49,15 @@ body {
     background-color: rgba(19, 19, 19, 0.756);
     height: 60vh;
     width: 15rem;
+
     ul {
       padding: 0;
+
       h1 {
         font-size: 1.5rem;
         text-align: center;
       }
+
       li {
         font-size: 0.9rem;
         padding: 1rem;

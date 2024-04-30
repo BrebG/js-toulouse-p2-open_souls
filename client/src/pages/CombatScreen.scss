@@ -10,7 +10,7 @@
   background-position: 80%;
   width: 100%;
   height: 100%;
-  background-image: url("./src/assets/images/radahnBg.jpg");
+  background-image: url("../assets/radahnBg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -85,7 +85,7 @@
 
     img {
       padding-top: 2rem;
-      height: 20.25rem;
+      height: 35vh;
     }
 
     div {
@@ -134,8 +134,7 @@
     font-family: "Cinzel", serif;
 
     img {
-      // padding-top: 2rem;
-      height: 20rem;
+      height: 30vh;
     }
 
     div {
@@ -168,7 +167,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("./src/assets/images/elden-text-arena-id-7-8-9.png");
+  background-image: url("../assets/elden-text-arena-id-7-8-9.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -244,7 +243,7 @@
 
     img {
       padding-top: 2rem;
-      height: 20.25rem;
+      height: 30vh;
     }
 
     div {
@@ -293,8 +292,7 @@
     font-family: "Cinzel", serif;
 
     img {
-      // padding-top: 2rem;
-      height: 20rem;
+      height: 30vh;
     }
 
     div {
@@ -325,15 +323,19 @@
   0% {
     transform: translateX(0);
   }
+
   25% {
     transform: translateX(5px);
   }
+
   50% {
     transform: translateX(-5px);
   }
+
   75% {
     transform: translateX(5px);
   }
+
   100% {
     transform: translateX(0);
   }

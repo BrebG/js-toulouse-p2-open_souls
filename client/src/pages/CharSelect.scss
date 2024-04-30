@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(../assets/images/class-background.png);
+  background-image: url("../assets/class-background.png");
   background-color: var(--white-color);
   position: fixed;
   top: 0;
@@ -49,7 +49,7 @@
 }
 
 .class-image {
-  width: 10rem;
+  max-width: 8rem;
   margin: 1rem;
 }
 

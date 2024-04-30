@@ -18,7 +18,7 @@ function CombatScreenGodefrey() {
   const sampleEnnemy = {
     id: "17f69a82a2el0i1uta5rxvqv53g7e",
     name: "Godfrey, First Elden Lord (hoarah Loux)",
-    image: "./src/assets/images/godefrey.png",
+    image: "./src/assets/godefrey.png",
     region: "Altus Plateau",
     description:
       "I've given thee courtesy enough. Now I fight as Hoarah Loux. Warrior!",
@@ -28,7 +28,6 @@ function CombatScreenGodefrey() {
       1: "Remembrance of Hoarah Loux",
     },
     healthPoints: "≈2200",
-    background: "./src/assets/images/elden-text-arena-id-7-8-9.jpg",
   };
 
   const samplePlayer = {

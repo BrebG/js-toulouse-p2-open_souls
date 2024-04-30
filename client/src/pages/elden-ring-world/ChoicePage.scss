@@ -2,8 +2,9 @@
   margin: 0%;
   box-sizing: border-box;
 }
+
 .choice-page {
-  background-image: url("../../assets/images/elden-text-content-id-1-2-3.png");
+  background-image: url("../../assets/elden-text-content-id-1-2-3.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -83,6 +84,7 @@
   border-radius: 999px;
   text-decoration: none;
   box-shadow: 0px 2px 10px var(--darker-color);
+  font-size: clamp(0.5rem, 80%, 1rem);
 }
 
 .choice-button a:hover {
@@ -95,25 +97,25 @@ h3 {
 }
 
 .small-old-chests {
-  background-image: url("../../assets/images/elden-text-content-id-4-5-6.png");
+  background-image: url("../../assets/elden-text-content-id-4-5-6.jpg");
 }
 
 .small-chest {
-  background-image: url("../../assets/images/elden-text-arena-id-7-8-9.png");
+  background-image: url("../../assets/elden-text-arena-id-7-8-9.jpg");
 }
 
 .mimic-choice {
-  background-image: url("../../assets/images/elden-text-content-id-10-11.png");
+  background-image: url("../../assets/elden-text-content-id-10-11.jpg");
 }
 
 .last-choice {
-  background-image: url("../../assets/images/elden-text-content-id-14-15-16-17.png");
+  background-image: url("../../assets/elden-text-content-id-14-15-16-17.jpg");
 }
 
 .sneak-past {
-  background-image: url("../../assets/images/enlden-text-content-id-19.png") !important;
+  background-image: url("../../assets/enlden-text-content-id-19.jpg") !important;
 }
 
 .reduvia {
-  background-image: url("../../assets/images/elden-text-content-id-14-15-16-17.png");
+  background-image: url("../../assets/elden-text-content-id-14-15-16-17.jpg");
 }
